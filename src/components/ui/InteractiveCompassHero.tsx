@@ -228,16 +228,15 @@ export function InteractiveCompassHero() {
             </motion.div>
           </motion.div>
         </div>
-
         {/* Right Compass UI */}
         <motion.div 
           className="flex-1 w-full max-w-[420px] lg:max-w-[500px] xl:max-w-[540px] aspect-square relative flex items-center justify-center mx-auto lg:ml-auto lg:mr-16 xl:mr-24 perspective-[1000px]"
         >
           {/* Orbital Outer Rings */}
-          <motion.div animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} className="absolute inset-[-30px] sm:inset-[-50px] rounded-full border border-dashed border-[#8B6914]/30 pointer-events-none" />
+          <motion.div animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} className="absolute inset-[-15px] sm:inset-[-50px] rounded-full border border-dashed border-[#8B6914]/30 pointer-events-none" />
           
           {/* Radar Sweep Effect inside compass */}
-          <div className="absolute inset-0 rounded-full overflow-hidden z-0 mask-image-radial pointer-events-none">
+          <div className="absolute inset-8 sm:inset-0 rounded-full overflow-hidden z-0 mask-image-radial pointer-events-none">
              <motion.div animate={{ rotate: 360 }} transition={{ duration: 10, repeat: Infinity, ease: "linear" }} className="absolute top-0 right-1/2 w-1/2 h-1/2 bg-gradient-to-br from-[#C5A059]/30 to-transparent origin-bottom-right" />
           </div>
 
@@ -246,7 +245,7 @@ export function InteractiveCompassHero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="absolute inset-0 rounded-full border border-[#C5A059]/30 bg-[#0B1736]/30 backdrop-blur-xl shadow-[0_0_60px_rgba(212,175,55,0.1)] z-10 transform-style-3d"
+            className="absolute inset-8 sm:inset-0 rounded-full border border-[#C5A059]/30 bg-[#0B1736]/30 backdrop-blur-xl shadow-[0_0_60px_rgba(212,175,55,0.1)] z-10 transform-style-3d"
           >
             <div className="absolute inset-3 rounded-full border border-dashed border-[#8B6914]/20" />
             <div className="absolute inset-10 rounded-full border border-[#8B6914]/10" />
@@ -278,9 +277,18 @@ export function InteractiveCompassHero() {
                     <node.Icon className={`transition-colors duration-300 ${isHighlighted ? 'w-6 h-6 lg:w-7 lg:h-7 text-[#040F2D]' : 'w-5 h-5 lg:w-6 lg:h-6 text-[#8B9ECC] group-hover:text-[#040F2D]'}`} />
                   </motion.div>
                   <motion.span 
-                    initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.8 + (node.id * 0.1) }}
-                    className={`absolute ${node.angle === 0 ? '-top-12' : node.angle === 180 ? '-bottom-12' : node.angle > 0 && node.angle < 180 ? '-right-28' : '-left-28'} 
-                      px-2 py-1 text-[10px] sm:text-xs font-bold tracking-widest uppercase whitespace-nowrap transition-all duration-300
+                    initial={{ opacity: 0 }} 
+                    animate={{ opacity: 1 }} 
+                    transition={{ delay: 1.8 + (node.id * 0.1) }}
+                    className={`absolute px-2 py-1 text-[9px] sm:text-xs font-bold tracking-widest uppercase transition-all duration-300 leading-tight
+                      ${node.angle === 0 
+                        ? 'bottom-full mb-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:bottom-auto lg:mb-0 lg:left-1/2 lg:-translate-x-1/2 lg:-top-12 lg:whitespace-nowrap' 
+                        : node.angle === 180 
+                          ? 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-1/2 lg:-translate-x-1/2 lg:-bottom-12 lg:whitespace-nowrap' 
+                          : node.angle > 0 && node.angle < 180 
+                            ? 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-auto lg:translate-x-0 lg:-right-28 lg:text-left lg:whitespace-nowrap' 
+                            : 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-auto lg:translate-x-0 lg:-left-28 lg:text-right lg:whitespace-nowrap'
+                      }
                       ${isHighlighted ? 'text-[#D4AF37] scale-110 drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]' : 'text-[#8B9ECC]'}
                     `}
                   >
@@ -295,7 +303,7 @@ export function InteractiveCompassHero() {
           <motion.div
             animate={{ rotate: activeAngle }} 
             transition={{ duration: isSpinning ? 5.5 : 0.6, ease: isSpinning ? [0.15, 0.95, 0.4, 1] : "backOut" }}
-            className="absolute z-20 w-20 h-[75%] pointer-events-none drop-shadow-[0_10px_20px_rgba(4,15,45,0.2)]"
+            className="absolute z-20 w-20 h-[70%] sm:h-[75%] pointer-events-none drop-shadow-[0_10px_20px_rgba(4,15,45,0.2)]"
           >
             <svg viewBox="0 0 100 400" className="w-full h-full">
               <polygon points="50,15 85,200 50,200" fill="url(#gold-grad)" />
