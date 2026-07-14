@@ -33,11 +33,11 @@ function InteractiveBar({ index, total, mouseXProgress }: { index: number, total
 
   return (
     <motion.div 
-      className="flex-1 mx-[2px] sm:mx-[4px] md:mx-1.5 bg-gradient-to-t from-[#D4AF37]/20 via-[#D4AF37]/70 to-[#F3E5AB] rounded-t-sm origin-bottom"
+      className="flex-1 mx-[2px] sm:mx-[4px] md:mx-1.5 bg-gradient-to-t from-[#040F2D]/20 via-[#040F2D]/70 to-[#040F2D] rounded-t-sm origin-bottom"
       style={{ 
         height: useTransform(heightPercent, v => `${v}%`),
         opacity: opacity,
-        boxShadow: useTransform(opacity, o => `0 0 ${o * 20}px rgba(212,175,55,${o * 0.5})`)
+        boxShadow: useTransform(opacity, o => `0 0 ${o * 20}px rgba(4,15,45,${o * 0.5})`)
       }}
     />
   );
@@ -69,7 +69,7 @@ export function MouseGrowthHero() {
   return (
     <section 
       ref={containerRef} 
-      className="relative pt-24 pb-32 lg:pt-28 lg:pb-48 overflow-hidden bg-[#040F2D] cursor-crosshair group border-b border-[#D4AF37]/10"
+      className="relative pt-24 pb-32 lg:pt-28 lg:pb-48 overflow-hidden bg-[var(--background)] transition-colors duration-500 cursor-crosshair group border-b border-[#D4AF37]/10"
     >
       {/* Background Ambience */}
       <div className="absolute inset-0 z-0">
@@ -93,7 +93,7 @@ export function MouseGrowthHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-sm font-bold text-[#D4AF37] tracking-[0.2em] uppercase mb-4"
+          className="text-sm font-light text-[#D4AF37] tracking-[0.2em] uppercase mb-4"
         >
           Get in Touch
         </motion.p>
@@ -101,7 +101,7 @@ export function MouseGrowthHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-sans tracking-tight text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6 pointer-events-none select-none"
+          className="font-sans tracking-tight text-5xl sm:text-6xl md:text-7xl font-light text-[var(--foreground)] mb-6 pointer-events-none select-none"
         >
           Chart Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] bg-[length:200%_auto] animate-gradient-x">Growth</span>
         </motion.h1>
@@ -109,7 +109,7 @@ export function MouseGrowthHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg text-[#A3B5D9] max-w-2xl mx-auto font-light pointer-events-none select-none"
+          className="text-lg text-[var(--theme-text-muted)] max-w-2xl mx-auto font-light pointer-events-none select-none"
         >
           Move your cursor across the screen to preview the potential. Contact us today to turn these financial projections into your reality.
         </motion.p>

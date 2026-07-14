@@ -87,7 +87,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
                 className={`absolute w-[300px] sm:w-[420px] lg:w-[520px] cursor-pointer transform-style-3d`}
                 onClick={() => setActiveIndex(index)}
               >
-                <div className={`bg-white border ${isCenter ? 'border-[#D4AF37]' : 'border-[#D4AF37]/20'} rounded-3xl p-8 shadow-[0_20px_50px_rgba(4,15,45,0.2)] h-full min-h-[320px] flex flex-col justify-between transition-colors duration-500`}>
+                <div className={`bg-[#040F2D] backdrop-blur-xl border ${isCenter ? 'border-[#D4AF37]' : 'border-[#D4AF37]/20'} rounded-3xl p-8 shadow-[0_20px_50px_rgba(4,15,45,0.4)] h-full min-h-[320px] flex flex-col justify-between transition-colors duration-500`}>
                   <div>
                     {/* Stars */}
                     <div className="flex gap-1 mb-6">
@@ -97,17 +97,17 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
                         </svg>
                       ))}
                     </div>
-                    <p className={`${isCenter ? 'text-[#040F2D]' : 'text-slate-500'} font-medium leading-relaxed mb-8 text-sm sm:text-base line-clamp-6`}>
+                    <p className={`${isCenter ? 'text-white' : 'text-[#A3B5D9]'} font-medium leading-relaxed mb-8 text-sm sm:text-base line-clamp-6 transition-colors duration-500`}>
                       &ldquo;{t.text}&rdquo;
                     </p>
                   </div>
                   <div className="flex items-center gap-4 mt-auto">
-                    <div className={`w-12 h-12 rounded-full ${isCenter ? 'bg-[#D4AF37]/20 text-[#040F2D] border border-[#D4AF37]/30' : 'bg-[#040F2D]/5 text-[#040F2D]/60'} flex items-center justify-center font-bold text-lg transition-colors`}>
+                    <div className={`w-12 h-12 rounded-full ${isCenter ? 'bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/30' : 'bg-white/5 text-[#A3B5D9]'} flex items-center justify-center font-light text-lg transition-colors`}>
                       {t.name.charAt(0)}
                     </div>
                     <div>
-                      <p className={`font-[family-name:var(--font-outfit)] font-semibold ${isCenter ? 'text-[#040F2D]' : 'text-[#040F2D]/70'}`}>{t.name}</p>
-                      <p className="text-xs text-slate-500">Verified Client</p>
+                      <p className={`font-[family-name:var(--font-outfit)] font-light ${isCenter ? 'text-white' : 'text-[#A3B5D9]'} transition-colors duration-500`}>{t.name}</p>
+                      <p className="text-xs text-[#A3B5D9]/70 transition-colors duration-500">Verified Client</p>
                     </div>
                   </div>
                 </div>

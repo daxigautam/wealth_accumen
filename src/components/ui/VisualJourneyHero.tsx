@@ -69,7 +69,7 @@ export function VisualJourneyHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col bg-[#040F2D] overflow-hidden pt-20">
+    <section className="relative min-h-[100dvh] flex flex-col bg-[var(--background)] transition-colors duration-500 overflow-hidden pt-20">
       
       {/* Background Image Area (Right Side) */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -100,7 +100,7 @@ export function VisualJourneyHero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative inline-block text-left">
-              <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-[65px] leading-[1.2] sm:leading-[1.1] font-bold text-white tracking-tight mb-6">
+              <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-[65px] leading-[1.2] sm:leading-[1.1] font-light text-[var(--foreground)] tracking-tight mb-6">
                 Helping You <br />
                 <div className="inline-flex flex-col justify-center h-[1.3em] sm:h-[1.1em] overflow-hidden align-bottom text-[#D4AF37] relative my-1">
                   <AnimatePresence mode="wait">
@@ -125,7 +125,7 @@ export function VisualJourneyHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="mt-5 max-w-2xl text-base sm:text-lg text-[#A3B5D9] font-medium tracking-wide"
+            className="mt-5 max-w-2xl text-base sm:text-lg text-[var(--theme-text-muted)] font-medium tracking-wide"
           >
             A strategic, elegant approach to securing your financial future. Expert guidance mapped directly to your life's greatest milestones.
           </motion.p>
@@ -146,7 +146,7 @@ export function VisualJourneyHero() {
                   <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-[#D4AF37]/30 flex items-center justify-center bg-[#D4AF37]/5 shrink-0">
                     <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" strokeWidth={1.5} />
                   </div>
-                  <span className="text-[10px] sm:text-xs font-bold text-white whitespace-nowrap">{milestone.title}</span>
+                  <span className="text-[10px] sm:text-xs font-light text-[#040F2D] whitespace-nowrap">{milestone.title}</span>
                 </motion.div>
               );
             })}
@@ -163,13 +163,13 @@ export function VisualJourneyHero() {
               href="https://wa.me/something"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto bg-[#D4AF37] hover:bg-[#C9670A] text-white font-semibold text-sm sm:text-base py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D9791A]/20"
+              className="w-full sm:w-auto bg-[#D4AF37] hover:bg-[#C9670A] text-white font-light text-sm sm:text-base py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D9791A]/20"
             >
               Book Free Consultation &rarr;
             </a>
             <Link
               href="/services"
-              className="w-full sm:w-auto bg-[#040F2D] hover:bg-[#0B1736] text-white border border-[#D4AF37]/20 font-semibold text-sm sm:text-base py-3 px-6 rounded-full transition-all duration-300 shadow-sm"
+              className="w-full sm:w-auto bg-[var(--secondary-bg)] hover:bg-[var(--glass-hover-bg)] text-[var(--foreground)] border border-[var(--glass-border)] font-light text-sm sm:text-base py-3 px-6 rounded-full transition-all duration-300 shadow-sm"
             >
               Explore Solutions &rarr;
             </Link>
@@ -186,14 +186,14 @@ export function VisualJourneyHero() {
       </div>
 
       {/* Bottom Stats Bar & Trust Badges */}
-      <div className="relative z-20 w-full bg-[#040F2D] border-t border-[#D4AF37]/20 shadow-[0_-10px_40px_rgba(0,0,0,0.03)] mt-auto py-8">
+      <div className="relative z-20 w-full bg-[var(--background)] transition-colors duration-500 border-t border-[var(--glass-border)] shadow-[0_-10px_40px_rgba(0,0,0,0.03)] mt-auto py-8">
         <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 flex flex-wrap justify-between items-center text-center gap-y-8">
           {stats.map((stat, i) => (
             <div key={i} className="w-1/2 sm:w-1/4 sm:border-r last:border-0 border-[#D4AF37]/20">
-              <div className="text-3xl sm:text-4xl font-[family-name:var(--font-playfair)] font-bold text-[#D4AF37] mb-1">
+              <div className="text-3xl sm:text-4xl font-[family-name:var(--font-playfair)] font-light text-[#D4AF37] mb-1">
                 <Counter target={stat.target} prefix={stat.prefix} suffix={stat.suffix} />
               </div>
-              <div className="text-[10px] sm:text-xs text-slate-500 font-semibold tracking-wider uppercase">{stat.label}</div>
+              <div className="text-[10px] sm:text-xs text-[var(--theme-text-muted)] font-light tracking-wider uppercase">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -220,12 +220,12 @@ export function VisualJourneyHero() {
                   whileHover={{ y: -5 }}
                   className={`flex items-center gap-4 bg-gradient-to-br ${colors.split(' ').filter(c => c.startsWith('from') || c.startsWith('to') || c.startsWith('border') || c.startsWith('hover:border') || c.startsWith('hover:shadow')).join(' ')} border rounded-2xl p-4 shadow-sm transition-all cursor-default`}
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#040F2D] flex items-center justify-center shrink-0 shadow-sm border border-white/50">
+                  <div className="w-12 h-12 rounded-full bg-[var(--background)] flex items-center justify-center shrink-0 shadow-sm border border-[var(--glass-border)]">
                     <badge.icon className={`w-5 h-5 ${colors.split(' ').find(c => c.startsWith('text-') && !c.startsWith('text-sm') && !c.startsWith('text-xs'))}`} />
                   </div>
                   <div className="text-left">
-                    <div className="text-[14px] font-bold text-white leading-tight mb-0.5">{badge.title}</div>
-                    <div className="text-xs text-[#A3B5D9] font-medium">{badge.subtitle}</div>
+                    <div className="text-[14px] font-light text-[var(--foreground)] leading-tight mb-0.5">{badge.title}</div>
+                    <div className="text-xs text-[var(--theme-text-muted)] font-medium">{badge.subtitle}</div>
                   </div>
                 </motion.div>
               );

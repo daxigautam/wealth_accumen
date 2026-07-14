@@ -76,7 +76,7 @@ export default function EBookPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4"
+            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-light text-white mb-4"
           >
             Download our <span className="gradient-text">E-Book</span>
           </motion.h1>
@@ -108,7 +108,7 @@ export default function EBookPage() {
                   </svg>
                 </div>
 
-                <h2 className="font-[family-name:var(--font-outfit)] text-2xl font-bold text-white text-center mb-2">
+                <h2 className="font-[family-name:var(--font-outfit)] text-2xl font-light text-white text-center mb-2">
                   Submit form to download E-Book
                 </h2>
                 <p className="text-sm text-slate-500 text-center mb-8">

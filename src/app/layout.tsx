@@ -64,6 +64,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,14 +75,21 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${outfit.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable} ${playfair.variable} antialiased`}
-      style={{ colorScheme: "light" }}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col bg-[#F8FAFC] text-[#0F172A] noise-overlay">
-        <LenisProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </LenisProvider>
+      <body className="min-h-screen flex flex-col noise-overlay transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LenisProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </LenisProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

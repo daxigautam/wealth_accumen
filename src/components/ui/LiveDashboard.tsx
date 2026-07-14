@@ -55,12 +55,12 @@ export function LiveDashboard() {
           {/* Top Section */}
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-500">Live Portfolio</span>
+              <span className="text-xs font-light tracking-[0.2em] uppercase text-slate-500">Live Portfolio</span>
               <motion.span 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="flex items-center gap-1.5 text-sm font-bold text-emerald-600 bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-full shadow-sm"
+                className="flex items-center gap-1.5 text-sm font-light text-emerald-600 bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-full shadow-sm"
               >
                 <TrendingUp className="w-4 h-4" /> +18.6%
               </motion.span>
@@ -69,7 +69,7 @@ export function LiveDashboard() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl sm:text-6xl font-[family-name:var(--font-outfit)] font-extrabold text-white tracking-tight drop-shadow-sm"
+              className="text-5xl sm:text-6xl font-[family-name:var(--font-outfit)] font-light text-white tracking-tight drop-shadow-sm"
             >
               ₹ 12.4 <span className="text-3xl text-[#8B9ECC]">Cr</span>
             </motion.div>
@@ -77,7 +77,7 @@ export function LiveDashboard() {
 
           {/* Bottom Section */}
           <div className="mt-8">
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-500 mb-4 block">Active Goals</span>
+            <span className="text-xs font-light tracking-[0.2em] uppercase text-slate-500 mb-4 block">Active Goals</span>
             <div className="space-y-3">
               {['Retirement', 'Education', 'Wealth Creation'].map((goal, i) => (
                 <motion.div 
@@ -90,7 +90,7 @@ export function LiveDashboard() {
                   <div className="w-8 h-8 rounded-full bg-emerald-100/80 flex items-center justify-center text-emerald-600 shrink-0">
                     <Check className="w-4 h-4" strokeWidth={3} />
                   </div>
-                  <span className="font-[family-name:var(--font-playfair)] text-lg font-bold text-white">
+                  <span className="font-[family-name:var(--font-playfair)] text-lg font-light text-white">
                     {goal}
                   </span>
                 </motion.div>

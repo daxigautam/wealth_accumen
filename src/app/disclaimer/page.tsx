@@ -53,7 +53,7 @@ export default function DisclaimerPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-4 text-white"
+            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-light leading-tight tracking-tight mb-4 text-white"
           >
             {disclaimerContent.title}
           </motion.h1>
@@ -87,7 +87,7 @@ export default function DisclaimerPage() {
 
               {/* Acknowledgements */}
               <div className="border-t border-[#D4AF37]/20 pt-8">
-                <h2 className="font-[family-name:var(--font-outfit)] text-xl font-semibold text-white mb-6">
+                <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-white mb-6">
                   By using our services, you acknowledge that:
                 </h2>
                 <ul className="space-y-4">

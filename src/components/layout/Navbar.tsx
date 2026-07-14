@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 import { brand } from "@/config/brand";
 
 const navLinks = [
@@ -51,10 +53,14 @@ const loginLinks = [
 
 export function Navbar() {
   const pathname = usePathname();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showAnnouncement, setShowAnnouncement] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -85,7 +91,7 @@ export function Navbar() {
     localStorage.setItem("wealth_acumen_announcement_dismissed", "true");
   };
 
-  const currentMonthName = new Date().toLocaleString("en-US", { month: "long" });
+  const isDarkMode = mounted && resolvedTheme === "dark";
 
   return (
     <>
@@ -110,7 +116,7 @@ export function Navbar() {
                 href={brand.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#D4AF37] hover:bg-[#C59B27] text-[#040F2D] font-bold py-1 px-3.5 rounded-full text-xs transition-colors shrink-0 whitespace-nowrap ml-1 shadow-sm"
+                className="bg-[#D4AF37] hover:bg-[#C59B27] text-[#040F2D] font-light py-1 px-3.5 rounded-full text-xs transition-colors shrink-0 whitespace-nowrap ml-1 shadow-sm"
               >
                 Claim Free Slot &rarr;
               </a>
@@ -133,30 +139,31 @@ export function Navbar() {
           showAnnouncement ? "top-10" : "top-0"
         } ${
           scrolled
-            ? "bg-[#040F2D]/85 backdrop-blur-xl border-b border-[#D4AF37]/20 shadow-lg shadow-black/20"
+            ? "glass-nav shadow-lg"
             : "bg-transparent border-b border-transparent"
         }`}
       >
-        <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Mobile Menu Button (Left on Mobile) */}
             <button
-              className="lg:hidden p-2 -ml-2 rounded-lg hover:bg-slate-100 transition-colors"
+              className="lg:hidden p-2 -ml-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
               <div className="w-6 h-5 relative flex flex-col justify-between">
-                <span className={`block h-0.5 w-6 rounded-full transition-all duration-300 bg-[#D4AF37] ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-                <span className={`block h-0.5 w-6 rounded-full transition-all duration-300 bg-[#D4AF37] ${mobileOpen ? "opacity-0" : ""}`} />
-                <span className={`block h-0.5 w-6 rounded-full transition-all duration-300 bg-[#D4AF37] ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                <span className={`block h-0.5 w-6 rounded-full transition-all duration-300 bg-[var(--theme-accent)] ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+                <span className={`block h-0.5 w-6 rounded-full transition-all duration-300 bg-[var(--theme-accent)] ${mobileOpen ? "opacity-0" : ""}`} />
+                <span className={`block h-0.5 w-6 rounded-full transition-all duration-300 bg-[var(--theme-accent)] ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
               </div>
             </button>
+            
             {/* Left Side: Logo */}
-            <Link href="/" className="flex items-center gap-3 shrink-0 lg:mr-8 ml-4 lg:ml-0">
-              <div className="relative w-[100px] h-[75px] overflow-hidden shrink-0">
-                <div className="absolute top-0 left-0 w-full h-full">
+            <Link href="/" className="flex items-center gap-3 shrink-0 lg:mr-8 ml-4 lg:ml-0 z-10">
+              <div className="relative w-[140px] h-[60px] shrink-0">
+                <div className="absolute top-0 left-0 w-full h-full flex items-center">
                   <Image
-                    src="/assets/logo/logo-white.png"
+                    src={isDarkMode ? "/assets/logo/logo-white.png" : "/assets/logo/logo.png"}
                     alt="Wealth Acumen"
                     fill
                     className="object-contain object-left"
@@ -166,55 +173,8 @@ export function Navbar() {
               </div>
             </Link>
 
-            {/* Right Side: Desktop Nav and Login */}
-            <div className="hidden lg:flex items-center gap-4 h-full ml-auto flex-row-reverse">
-              {/* Login Button */}
-              <div
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("login")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <button className={`px-5 h-[44px] text-sm font-semibold transition-colors rounded-full flex items-center gap-1.5 shadow-sm backdrop-blur-md text-[#040F2D] bg-gradient-to-r from-[#D4AF37] to-[#C59B27] hover:shadow-md border-transparent`}>
-                  Login
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform ${
-                      activeDropdown === "login" ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <AnimatePresence>
-                  {activeDropdown === "login" && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-1 w-56 py-2 rounded-xl bg-[#0B1736] border border-[#D4AF37]/30 shadow-lg shadow-black/40"
-                    >
-                      {loginLinks.map((item) => (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2.5 text-sm font-medium text-[#A3B5D9] hover:text-[#D4AF37] hover:bg-[#101E42] transition-colors"
-                        >
-                          {item.label}
-                        </a>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* Desktop Nav */}
-              <div className={`flex items-center backdrop-blur-md border shadow-sm rounded-full px-2 lg:px-3 h-[44px] transition-all duration-500 bg-[#0B1736]/90 border-[#D4AF37]/20`}>
+            {/* Center: Desktop Nav Links */}
+            <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center backdrop-blur-md border shadow-sm rounded-full px-3 lg:px-5 h-[52px] transition-all duration-500 bg-white/30 dark:bg-black/30 border-white/40 dark:border-white/10 gap-1 lg:gap-2">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
                 return (
@@ -228,10 +188,10 @@ export function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className={`px-2 lg:px-2.5 py-2 text-[15px] lg:text-[16px] font-semibold tracking-wide transition-colors flex items-center gap-1 relative ${
+                      className={`px-3 lg:px-4 py-2 text-[15px] lg:text-[16px] font-light tracking-wide transition-colors flex items-center gap-1.5 relative ${
                         isActive 
                           ? "text-[#D4AF37]" 
-                          : "text-[#E6EEFA] hover:text-[#D4AF37]"
+                          : "text-[var(--foreground)] hover:text-[#D4AF37]"
                       }`}
                     >
                       {link.label}
@@ -264,7 +224,7 @@ export function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 8, scale: 0.96 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-1 w-56 py-2 rounded-xl bg-[#0B1736] border border-[#D4AF37]/30 shadow-lg shadow-black/40"
+                          className="absolute top-full left-0 mt-1 w-56 py-2 rounded-xl bg-[var(--background)] border border-[var(--glass-border)] shadow-lg"
                         >
                           {link.children.map((child) => {
                             const isExternal = child.href.startsWith("http");
@@ -276,7 +236,7 @@ export function Navbar() {
                                 {...(isExternal
                                   ? { target: "_blank", rel: "noopener noreferrer" }
                                   : {})}
-                                className="block px-4 py-2.5 text-sm font-medium text-[#A3B5D9] hover:text-[#D4AF37] hover:bg-[#101E42] transition-colors"
+                                className="block px-4 py-2.5 text-sm font-medium text-[var(--theme-text-muted)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
                                 onClick={() => setActiveDropdown(null)}
                               >
                                 {child.label}
@@ -291,11 +251,66 @@ export function Navbar() {
               })}
             </div>
 
+            {/* Right Side: Theme Toggle and Login */}
+            <div className="hidden lg:flex items-center gap-3 z-10">
+              
+              {/* Theme Toggle Button */}
+              {mounted && (
+                <button
+                  onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                  className="p-2.5 rounded-full bg-[var(--secondary-bg)] border border-[var(--secondary-border)] text-[var(--foreground)] hover:text-[#D4AF37] transition-colors shadow-sm"
+                  aria-label="Toggle Theme"
+                >
+                  {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                </button>
+              )}
+
+              {/* Login Button */}
+              <div
+                className="relative"
+                onMouseEnter={() => setActiveDropdown("login")}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <button className={`px-5 h-[44px] text-sm font-light transition-colors rounded-full flex items-center gap-1.5 shadow-sm backdrop-blur-md text-[#040F2D] bg-gradient-to-r from-[#D4AF37] to-[#C59B27] hover:shadow-md border-transparent`}>
+                  Login
+                  <svg
+                    className={`w-3.5 h-3.5 transition-transform ${
+                      activeDropdown === "login" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <AnimatePresence>
+                  {activeDropdown === "login" && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full right-0 mt-1 w-56 py-2 rounded-xl bg-[var(--background)] border border-[var(--glass-border)] shadow-lg"
+                    >
+                      {loginLinks.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2.5 text-sm font-medium text-[var(--theme-text-muted)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
             </div>
-
-
-
-
           </div>
         </div>
       </nav>
@@ -318,20 +333,33 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-[#040F2D] border-l border-[#D4AF37]/20 overflow-y-auto"
+              className="absolute right-0 top-0 bottom-0 w-80 max-w-[85vw] bg-[var(--background)] border-l border-[var(--glass-border)] overflow-y-auto"
             >
-              <div className="p-6 pt-20 space-y-2">
+              <div className="p-6 pt-20 space-y-2 relative">
+                
+                {/* Mobile Theme Toggle */}
+                {mounted && (
+                  <div className="absolute top-6 right-6">
+                    <button
+                      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+                      className="p-2 rounded-full bg-[var(--secondary-bg)] border border-[var(--secondary-border)] text-[var(--foreground)] hover:text-[#D4AF37] transition-colors"
+                    >
+                      {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                  </div>
+                )}
+
                 {navLinks.map((link) => (
                   <div key={link.label}>
                     <Link
                       href={link.href}
-                      className="block px-4 py-3 text-base font-medium text-[#E6EEFA] hover:text-[#D4AF37] hover:bg-[#101E42] rounded-lg transition-colors"
+                      className="block px-4 py-3 text-base font-medium text-[var(--foreground)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
                       onClick={() => !link.children && setMobileOpen(false)}
                     >
                       {link.label}
                     </Link>
                     {link.children && (
-                      <div className="ml-4 border-l border-[#101E42] pl-4 space-y-1 mt-1 mb-2">
+                      <div className="ml-4 border-l border-[var(--glass-border)] pl-4 space-y-1 mt-1 mb-2">
                         {link.children.map((child) => {
                           const isExternal = child.href.startsWith("http");
                           const Tag = isExternal ? "a" : Link;
@@ -345,7 +373,7 @@ export function Navbar() {
                                     rel: "noopener noreferrer",
                                   }
                                 : {})}
-                              className="block px-3 py-2 text-sm text-[#A3B5D9] hover:text-[#D4AF37] hover:bg-[#101E42] rounded-lg transition-colors"
+                              className="block px-3 py-2 text-sm text-[var(--theme-text-muted)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
                               onClick={() => setMobileOpen(false)}
                             >
                               {child.label}
@@ -357,8 +385,8 @@ export function Navbar() {
                   </div>
                 ))}
 
-                <div className="pt-4 border-t border-[#101E42] space-y-2">
-                  <p className="px-4 text-xs font-medium text-[#8B9ECC] uppercase tracking-wider">
+                <div className="pt-4 border-t border-[var(--glass-border)] space-y-2">
+                  <p className="px-4 text-xs font-medium text-[var(--theme-text-muted)] uppercase tracking-wider">
                     Login / Register
                   </p>
                   {loginLinks.map((item) => (
@@ -367,7 +395,7 @@ export function Navbar() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-4 py-2.5 text-sm text-[#C7D4ED] hover:text-[#D4AF37] hover:bg-[#101E42] rounded-lg transition-colors"
+                      className="block px-4 py-2.5 text-sm text-[var(--foreground)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}

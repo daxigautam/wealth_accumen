@@ -78,7 +78,7 @@ export function AnimatedHeadline() {
       {phrases.map((phrase, i) => (
         <h1 
           key={i} 
-          className="phrase absolute left-0 font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-extrabold text-white leading-[1.1] tracking-tighter whitespace-nowrap"
+          className="phrase absolute left-0 font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-light text-white leading-[1.1] tracking-tighter whitespace-nowrap"
           style={{ opacity: 0, paddingBottom: '0.1em' }} 
         >
           {phrase}

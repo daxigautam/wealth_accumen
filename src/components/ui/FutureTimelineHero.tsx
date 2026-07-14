@@ -17,12 +17,12 @@ const milestones = [
 
 export function FutureTimelineHero() {
   return (
-    <section className="relative min-h-[100dvh] pt-28 pb-32 flex flex-col justify-center bg-[#F8FAFC] overflow-hidden">
+    <section className="relative min-h-[100dvh] pt-28 pb-32 flex flex-col justify-center bg-[var(--background)] transition-colors duration-500 overflow-hidden">
       {/* Dynamic Ambient Background */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Subtle grid base */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: "linear-gradient(rgba(15,23,42,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.5) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(212,175,55,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.2) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }} />
         
@@ -55,14 +55,14 @@ export function FutureTimelineHero() {
         >
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="h-px w-10 bg-[#D4AF37]" />
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-[#D4AF37]">Your Financial Roadmap</span>
+            <span className="text-xs font-light tracking-[0.2em] uppercase text-[#D4AF37]">Your Financial Roadmap</span>
             <div className="h-px w-10 bg-[#D4AF37]" />
           </div>
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[var(--foreground)] leading-tight mb-6">
             Securing <span className="text-[#D4AF37]">Today.</span><br />
-            <span className="italic text-slate-500">Empowering</span> Tomorrow.
+            <span className="italic text-[var(--theme-text-muted)]">Empowering</span> Tomorrow.
           </h1>
-          <p className="max-w-2xl mx-auto text-base sm:text-lg text-[#A3B5D9]">
+          <p className="max-w-2xl mx-auto text-base sm:text-lg text-[var(--theme-text-muted)]">
             A strategic approach to your life's milestones. From emergency funds to generational wealth, our solutions are mapped directly to your goals.
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ export function FutureTimelineHero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="bg-[#040F2D] border-2 border-slate-900 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 font-bold tracking-widest text-[10px] sm:text-xs shadow-lg whitespace-nowrap"
+              className="bg-[var(--secondary-bg)] border-2 border-[var(--glass-border)] rounded-full px-3 py-1.5 sm:px-4 sm:py-2 font-light tracking-widest text-[10px] sm:text-xs text-[var(--foreground)] shadow-lg whitespace-nowrap"
             >
               TODAY
             </motion.div>
@@ -88,7 +88,7 @@ export function FutureTimelineHero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 2.2 }}
-              className="bg-[#D4AF37] text-white rounded-full px-3 py-1.5 sm:px-4 sm:py-2 font-bold tracking-widest text-[10px] sm:text-xs shadow-lg shadow-[#D9791A]/30 whitespace-nowrap"
+              className="bg-[#D4AF37] text-white rounded-full px-3 py-1.5 sm:px-4 sm:py-2 font-light tracking-widest text-[10px] sm:text-xs shadow-lg shadow-[#D9791A]/30 whitespace-nowrap"
             >
               TOMORROW
             </motion.div>
@@ -118,16 +118,16 @@ export function FutureTimelineHero() {
                   className="relative group cursor-pointer"
                 >
                   {/* Dot */}
-                  <div className={`w-3 h-3 sm:w-5 sm:h-5 rounded-full border-2 sm:border-4 border-white shadow-sm transition-transform duration-300 group-hover:scale-150 ${i === milestones.length - 1 ? 'bg-[#D4AF37]' : 'bg-slate-800'}`} />
+                  <div className={`w-3 h-3 sm:w-5 sm:h-5 rounded-full border-2 sm:border-4 border-white shadow-sm transition-transform duration-300 group-hover:scale-150 ${i === milestones.length - 1 ? 'bg-[#D4AF37]' : 'bg-[var(--secondary-bg)]'}`} />
                   
                   {/* Card Component */}
                   <div className={`absolute left-1/2 -translate-x-1/2 w-[90px] sm:w-[130px] ${isTop ? 'bottom-full mb-4 sm:mb-6' : 'top-full mt-4 sm:mt-6'}`}>
-                    <div className={`flex flex-col items-center text-center p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#040F2D] border border-[#D4AF37]/20 shadow-xl shadow-black/40 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl`}>
+                    <div className={`flex flex-col items-center text-center p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[var(--secondary-bg)] border border-[var(--glass-border)] shadow-xl shadow-black/10 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl`}>
                       <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full ${ms.bg} flex items-center justify-center mb-2 sm:mb-3`}>
                         <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${ms.color}`} />
                       </div>
-                      <h3 className="font-bold text-white text-[10px] sm:text-sm leading-tight mb-0.5 sm:mb-1">{ms.title}</h3>
-                      <p className="hidden sm:block text-[10px] sm:text-xs text-slate-500 font-medium">{ms.desc}</p>
+                      <h3 className="font-light text-[var(--foreground)] text-[10px] sm:text-sm leading-tight mb-0.5 sm:mb-1">{ms.title}</h3>
+                      <p className="hidden sm:block text-[10px] sm:text-xs text-[var(--theme-text-muted)] font-medium">{ms.desc}</p>
                     </div>
                     {/* Connecting dashed line */}
                     <div className={`absolute left-1/2 -translate-x-1/2 w-px border-l-2 border-dashed border-[#D4AF37]/20 h-4 sm:h-6 ${isTop ? 'top-full' : 'bottom-full'}`} />
@@ -149,13 +149,13 @@ export function FutureTimelineHero() {
             href={brand.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-gradient-to-r from-[#D9791A] to-[#C59B27] text-white font-semibold py-4 px-8 rounded-full shadow-[0_0_30px_rgba(217,121,26,0.2)] hover:shadow-[0_0_40px_rgba(217,121,26,0.4)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto bg-gradient-to-r from-[#D9791A] to-[#C59B27] text-white font-light py-4 px-8 rounded-full shadow-[0_0_30px_rgba(217,121,26,0.2)] hover:shadow-[0_0_40px_rgba(217,121,26,0.4)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             Start Your Journey
           </a>
           <Link
             href="/services"
-            className="w-full sm:w-auto bg-[#040F2D] hover:bg-[#0B1736] text-white font-medium py-4 px-8 rounded-full border border-[#D4AF37]/20 shadow-sm transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto bg-[var(--secondary-bg)] hover:bg-[var(--glass-hover-bg)] text-[var(--foreground)] font-medium py-4 px-8 rounded-full border border-[var(--glass-border)] shadow-sm transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
           >
             View Our Solutions
           </Link>

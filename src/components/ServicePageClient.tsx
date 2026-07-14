@@ -69,13 +69,13 @@ const serviceIcons: Record<string, React.ReactNode> = {
 /* ─── Sidebar Nav Links ─── */
 function ServiceNav({ currentSlug }: { currentSlug: string }) {
   return (
-    <nav className="bg-[#0B1736]/80 backdrop-blur-xl rounded-3xl p-6 lg:p-8 border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(212,175,55,0.15)] relative overflow-hidden">
+    <nav className="bg-[var(--secondary-bg)] backdrop-blur-xl rounded-3xl p-6 lg:p-8 border border-[var(--glass-border)] shadow-xl relative overflow-hidden transition-colors duration-500">
       {/* Subtle background glow inside the card */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#D4AF37]/5 to-transparent pointer-events-none" />
       
       <div className="flex items-center gap-4 mb-8">
         <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#D4AF37]" />
-        <h3 className="font-[family-name:var(--font-playfair)] text-base lg:text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] uppercase tracking-[0.25em]">
+        <h3 className="font-[family-name:var(--font-playfair)] text-base lg:text-lg font-light text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] uppercase tracking-[0.25em]">
           All Services
         </h3>
       </div>
@@ -88,7 +88,7 @@ function ServiceNav({ currentSlug }: { currentSlug: string }) {
               className={`flex items-center gap-3 px-5 py-3 rounded-2xl text-sm lg:text-base font-medium transition-all duration-300 ${
                 s.slug === currentSlug
                   ? "bg-gradient-to-r from-[#D4AF37] to-[#8B6914] text-[#040F2D] shadow-[0_4px_15px_rgba(212,175,55,0.4)] scale-[1.02]"
-                  : "text-[#A3B5D9] hover:text-[#F3E5AB] hover:bg-white/5 hover:scale-[1.02] border border-transparent hover:border-[#D4AF37]/20"
+                  : "text-[var(--theme-text-muted)] hover:text-[#D4AF37] hover:bg-[var(--foreground)]/5 hover:scale-[1.02] border border-transparent hover:border-[#D4AF37]/20"
               }`}
             >
               {s.title}
@@ -137,12 +137,12 @@ export default function ServicePageClient({ slug }: { slug: string }) {
           >
             <Link 
               href="/#services" 
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#040F2D]/50 border border-white/10 text-[#D4AF37] hover:bg-[#0B1736] hover:border-[#D4AF37]/50 hover:text-[#F3E5AB] hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all duration-300 backdrop-blur-md group"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#040F2D] border border-[#D4AF37]/30 text-[#D4AF37] hover:bg-[#0B1736] hover:border-[#D4AF37]/80 transition-all duration-300 backdrop-blur-md group shadow-md"
             >
               <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
               </svg>
-              <span className="text-sm font-semibold tracking-wider uppercase">Back to Services</span>
+              <span className="text-sm font-light tracking-wider uppercase">Back to Services</span>
             </Link>
           </motion.div>
 
@@ -150,13 +150,13 @@ export default function ServicePageClient({ slug }: { slug: string }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6"
+            className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight mb-6"
           >
             <span className="gradient-text">{heroMain}</span>
             {heroSub && (
               <>
                 <br className="hidden sm:block" />
-                <span className="text-slate-800 text-2xl sm:text-3xl md:text-4xl font-semibold block mt-3">{heroSub}</span>
+                <span className="text-[var(--theme-text-muted)] text-2xl sm:text-3xl md:text-4xl font-light block mt-3">{heroSub}</span>
               </>
             )}
           </motion.h1>
@@ -165,7 +165,7 @@ export default function ServicePageClient({ slug }: { slug: string }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg text-[#A3B5D9] max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-[#040F2D] max-w-2xl mx-auto leading-relaxed"
           >
             {service.shortDescription}
           </motion.p>
@@ -182,11 +182,11 @@ export default function ServicePageClient({ slug }: { slug: string }) {
                 <div className="glass rounded-2xl p-8 md:p-10">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-1 h-8 rounded-full bg-gradient-to-b from-[#D4AF37] to-[#C59B27]" />
-                    <h2 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-bold text-white">
+                    <h2 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-light text-white">
                       About {service.title}
                     </h2>
                   </div>
-                  <p className="text-[#A3B5D9] leading-relaxed text-base md:text-lg">{service.fullDescription}</p>
+                  <p className="text-[#040F2D] leading-relaxed text-base md:text-lg">{service.fullDescription}</p>
                 </div>
               </FadeInSection>
 
@@ -194,7 +194,7 @@ export default function ServicePageClient({ slug }: { slug: string }) {
                 <div className="glass rounded-2xl p-8 md:p-10">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-1 h-8 rounded-full bg-gradient-to-b from-[#C9670A] to-[#E8A33D]" />
-                    <h2 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-bold text-white">Key Features</h2>
+                    <h2 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-light text-white">Key Features</h2>
                   </div>
                   <ul className="space-y-4">
                     {service.features.map((feature, i) => (
@@ -211,7 +211,7 @@ export default function ServicePageClient({ slug }: { slug: string }) {
                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                           </svg>
                         </span>
-                        <span className="text-[#C7D4ED] leading-relaxed text-base">{feature}</span>
+                        <span className="text-[#040F2D] leading-relaxed text-base">{feature}</span>
                       </motion.li>
                     ))}
                   </ul>
@@ -223,8 +223,8 @@ export default function ServicePageClient({ slug }: { slug: string }) {
               <FadeInSection delay={0.2}><ServiceNav currentSlug={service.slug} /></FadeInSection>
               <FadeInSection delay={0.3}>
                 <div className="glass rounded-2xl p-6">
-                  <h3 className="font-[family-name:var(--font-outfit)] text-base font-semibold text-white mb-3">Need guidance?</h3>
-                  <p className="text-sm text-[#A3B5D9] leading-relaxed mb-5">Reach out to us for personalized assistance with {service.title.toLowerCase()} investments.</p>
+                  <h3 className="font-[family-name:var(--font-outfit)] text-base font-light text-white mb-3">Need guidance?</h3>
+                  <p className="text-sm text-[#040F2D] leading-relaxed mb-5">Reach out to us for personalized assistance with {service.title.toLowerCase()} investments.</p>
                   <a href={brand.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm inline-flex items-center gap-2 w-full justify-center !py-3">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
                     Chat on WhatsApp
@@ -233,13 +233,13 @@ export default function ServicePageClient({ slug }: { slug: string }) {
               </FadeInSection>
               <FadeInSection delay={0.35}>
                 <div className="glass rounded-2xl p-6">
-                  <h3 className="font-[family-name:var(--font-outfit)] text-base font-semibold text-white mb-4">Credentials</h3>
+                  <h3 className="font-[family-name:var(--font-outfit)] text-base font-light text-white mb-4">Credentials</h3>
                   <div className="space-y-3 text-sm">
-                    <div className="flex justify-between"><span className="text-slate-500 font-medium">AMFI ARN</span><span className="text-slate-800 font-bold">{brand.amfiRegNo}</span></div>
+                    <div className="flex justify-between"><span className="text-slate-500 font-medium">AMFI ARN</span><span className="text-slate-800 font-light">{brand.amfiRegNo}</span></div>
                     <div className="h-px bg-slate-200" />
-                    <div className="flex justify-between"><span className="text-slate-500 font-medium">EUIN</span><span className="text-slate-800 font-bold">{brand.euinNo}</span></div>
+                    <div className="flex justify-between"><span className="text-slate-500 font-medium">EUIN</span><span className="text-slate-800 font-light">{brand.euinNo}</span></div>
                     <div className="h-px bg-slate-200" />
-                    <div className="flex justify-between"><span className="text-slate-500 font-medium">Partner</span><span className="text-slate-800 font-bold">Angel One</span></div>
+                    <div className="flex justify-between"><span className="text-slate-500 font-medium">Partner</span><span className="text-slate-800 font-light">Angel One</span></div>
                   </div>
                 </div>
               </FadeInSection>
@@ -256,7 +256,7 @@ export default function ServicePageClient({ slug }: { slug: string }) {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-amber-500/10" />
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#D9791A]/50 to-transparent" />
               <div className="relative z-10">
-                <h2 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl font-bold text-white mb-4">
+                <h2 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl font-light text-white mb-4">
                   Interested in {service.title}?
                 </h2>
                 <p className="text-[#A3B5D9] mb-8 max-w-xl mx-auto">

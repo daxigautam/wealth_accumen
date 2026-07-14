@@ -87,10 +87,10 @@ export function CompoundingCalculator() {
           {/* Monthly Investment */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold text-[#C7D4ED]">
+              <label className="text-sm font-light text-[var(--theme-text-muted)] transition-colors duration-500">
                 Monthly Investment (SIP)
               </label>
-              <span className="text-sm font-bold text-[#D4AF37]">
+              <span className="text-sm font-light text-[var(--foreground)] transition-colors duration-500">
                 {formatCurrency(monthlyInvestment)}
               </span>
             </div>
@@ -101,7 +101,7 @@ export function CompoundingCalculator() {
               step={500}
               value={monthlyInvestment}
               onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
-              className="w-full"
+              className="w-full accent-[#040F2D] transition-colors duration-500"
             />
             <div className="flex justify-between text-xs text-slate-500 mt-1">
               <span>&#8377;500</span>
@@ -112,10 +112,10 @@ export function CompoundingCalculator() {
           {/* Annual Rate */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold text-[#C7D4ED]">
+              <label className="text-sm font-light text-[var(--theme-text-muted)] transition-colors duration-500">
                 Expected Annual Return
               </label>
-              <span className="text-sm font-bold text-cyan-600">
+              <span className="text-sm font-light text-[var(--foreground)] transition-colors duration-500">
                 {annualRate}%
               </span>
             </div>
@@ -126,7 +126,7 @@ export function CompoundingCalculator() {
               step={0.5}
               value={annualRate}
               onChange={(e) => setAnnualRate(Number(e.target.value))}
-              className="w-full"
+              className="w-full accent-[#040F2D] transition-colors duration-500"
             />
             <div className="flex justify-between text-xs text-slate-500 mt-1">
               <span>1%</span>
@@ -137,10 +137,10 @@ export function CompoundingCalculator() {
           {/* Time Period */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <label className="text-sm font-semibold text-[#C7D4ED]">
+              <label className="text-sm font-light text-[var(--theme-text-muted)] transition-colors duration-500">
                 Time Period
               </label>
-              <span className="text-sm font-bold text-amber-600">
+              <span className="text-sm font-light text-[var(--foreground)] transition-colors duration-500">
                 {years} Years
               </span>
             </div>
@@ -151,7 +151,7 @@ export function CompoundingCalculator() {
               step={1}
               value={years}
               onChange={(e) => setYears(Number(e.target.value))}
-              className="w-full"
+              className="w-full accent-[#040F2D] transition-colors duration-500"
             />
             <div className="flex justify-between text-xs text-slate-500 mt-1">
               <span>1 Year</span>
@@ -163,7 +163,7 @@ export function CompoundingCalculator() {
         {/* Results */}
         <div className="flex flex-col items-center justify-center">
           {/* Donut Chart */}
-          <div className="relative w-48 h-48 mb-8">
+          <div className="relative w-48 h-48 mb-8 text-[var(--foreground)] transition-colors duration-500">
             <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
               <circle
                 cx="60"
@@ -195,7 +195,7 @@ export function CompoundingCalculator() {
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <p className="text-xs text-slate-500">Total Value</p>
-              <p className="font-[family-name:var(--font-outfit)] text-lg font-bold text-white">
+              <p className="font-[family-name:var(--font-outfit)] text-lg font-light text-[var(--foreground)] transition-colors duration-500">
                 {formatCurrency(result.futureValue)}
               </p>
             </div>
@@ -203,21 +203,21 @@ export function CompoundingCalculator() {
 
           {/* Breakdown */}
           <div className="w-full space-y-4">
-            <div className="flex items-center justify-between p-3 rounded-xl bg-orange-50/50 border border-orange-100">
+            <div className="flex items-center justify-between p-3 rounded-xl bg-orange-50/50 border border-orange-100 transition-colors duration-500">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#D4AF37]" />
-                <span className="text-sm text-[#C7D4ED] font-medium">Invested Amount</span>
+                <div className="w-3 h-3 rounded-full bg-[#D4AF37] transition-colors duration-500" />
+                <span className="text-sm text-[var(--theme-text-muted)] font-medium transition-colors duration-500">Invested Amount</span>
               </div>
-              <span className="text-sm font-bold text-white">
+              <span className="text-sm font-light text-[var(--foreground)] transition-colors duration-500">
                 {formatCurrency(result.totalInvested)}
               </span>
             </div>
-            <div className="flex items-center justify-between p-3 rounded-xl bg-cyan-50/40 border border-cyan-100">
+            <div className="flex items-center justify-between p-3 rounded-xl bg-[#A3B5D9]/20 border border-[#A3B5D9]/30 transition-colors duration-500">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-cyan-500" />
-                <span className="text-sm text-[#C7D4ED] font-medium">Wealth Gained</span>
+                <div className="w-3 h-3 rounded-full bg-[#A3B5D9]" />
+                <span className="text-sm text-[var(--theme-text-muted)] font-medium transition-colors duration-500">Wealth Gained</span>
               </div>
-              <span className="text-sm font-bold text-white">
+              <span className="text-sm font-light text-[var(--foreground)] transition-colors duration-500">
                 {formatCurrency(result.wealthGained)}
               </span>
             </div>
@@ -230,23 +230,23 @@ export function CompoundingCalculator() {
         <div className="mt-10 pt-8 border-t border-[#D4AF37]/20">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
             <div>
-              <h3 className="font-[family-name:var(--font-outfit)] text-xl font-bold text-white flex items-center gap-2">
+              <h3 className="font-[family-name:var(--font-outfit)] text-xl font-light text-[var(--foreground)] flex items-center gap-2 transition-colors duration-500">
                 <span className="text-red-500">⏳</span> Opportunity Cost of Delaying
               </h3>
-              <p className="text-sm text-[#A3B5D9] mt-1">
+              <p className="text-sm text-[var(--theme-text-muted)] mt-1 transition-colors duration-500">
                 See the real price of waiting to start. Procrastination is a silent tax on your compounding wealth.
               </p>
             </div>
-            <div className="flex items-center gap-2 bg-slate-100 p-1.5 rounded-xl self-start lg:self-auto border border-[#D4AF37]/20">
-              <span className="text-xs text-slate-500 font-bold px-2 whitespace-nowrap">Delay Starting:</span>
+            <div className="flex items-center gap-2 bg-[var(--glass-bg)] p-1.5 rounded-xl self-start lg:self-auto border border-[#D4AF37]/20 transition-colors duration-500">
+              <span className="text-xs text-slate-500 font-light px-2 whitespace-nowrap">Delay Starting:</span>
               {[1, 2, 3, 5].filter((d) => d < years).map((d) => (
                 <button
                   key={d}
                   onClick={() => setDelayYears(d)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-light transition-all cursor-pointer ${
                     delayYears === d
                       ? "bg-[#D4AF37] text-white shadow-sm"
-                      : "text-[#A3B5D9] hover:text-slate-950 hover:bg-slate-200"
+                      : "text-[var(--theme-text-muted)] hover:text-slate-950 hover:bg-slate-200 transition-colors duration-500"
                   }`}
                 >
                   {d} {d === 1 ? "Year" : "Years"}
@@ -260,47 +260,47 @@ export function CompoundingCalculator() {
             <div className="rounded-2xl border border-red-200/80 bg-red-50/30 p-6 flex flex-col justify-between relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/[0.02] rounded-full blur-xl pointer-events-none" />
               <div>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-red-700 bg-red-100/60 px-2.5 py-1 rounded-full mb-4">
+                <span className="inline-flex items-center gap-1 text-xs font-light text-red-700 bg-red-100/60 px-2.5 py-1 rounded-full mb-4">
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                   Lost Compound Wealth
                 </span>
-                <p className="text-sm text-[#C7D4ED] leading-relaxed font-medium">
+                <p className="text-sm text-[var(--theme-text-muted)] leading-relaxed font-medium transition-colors duration-500">
                   Delaying your investment by <strong className="text-red-700">{delayYears} {delayYears === 1 ? "year" : "years"}</strong> will reduce your maturity value by:
                 </p>
-                <p className="text-3xl sm:text-4xl font-[family-name:var(--font-outfit)] font-black text-red-600 mt-3 tracking-tight">
+                <p className="text-3xl sm:text-4xl font-[family-name:var(--font-outfit)] font-light text-red-600 mt-3 tracking-tight">
                   -{formatCurrency(delayResult.lostWealth)}
                 </p>
               </div>
-              <p className="text-xs text-slate-500 mt-4 pt-4 border-t border-red-100/50">
-                Maturity drops from <span className="font-semibold">{formatCurrency(result.futureValue)}</span> to <span className="font-semibold text-[#C7D4ED]">{formatCurrency(delayResult.fvDelayed)}</span>.
+              <p className="text-xs text-slate-500 mt-4 pt-4 border-t border-red-100/50 transition-colors duration-500">
+                Maturity drops from <span className="font-light">{formatCurrency(result.futureValue)}</span> to <span className="font-light text-[var(--theme-text-muted)]">{formatCurrency(delayResult.fvDelayed)}</span>.
               </p>
             </div>
 
             {/* Catch-Up Penalty Card */}
-            <div className="rounded-2xl border border-amber-200 bg-amber-50/30 p-6 flex flex-col justify-between relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/[0.02] rounded-full blur-xl pointer-events-none" />
+            <div className="rounded-2xl border border-[#D4AF37]/30 bg-[#040F2D] p-6 flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#D4AF37]/10 rounded-full blur-xl pointer-events-none" />
               <div>
-                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 bg-amber-100/80 px-2.5 py-1 rounded-full mb-4">
+                <span className="inline-flex items-center gap-1.5 text-xs font-light text-[#D4AF37] bg-[#D4AF37]/10 border border-[#D4AF37]/20 px-2.5 py-1 rounded-full mb-4">
                   <span>📈</span> Catch-Up Penalty
                 </span>
-                <p className="text-sm text-[#C7D4ED] leading-relaxed font-medium">
+                <p className="text-sm text-[#A3B5D9] leading-relaxed font-medium transition-colors duration-500">
                   To still reach your original goal of <strong className="text-white">{formatCurrency(result.futureValue)}</strong> in {years} years, you must invest:
                 </p>
-                <p className="text-3xl sm:text-4xl font-[family-name:var(--font-outfit)] font-black text-white mt-3 tracking-tight">
-                  {formatCurrency(delayResult.requiredSipToCatchUp)} <span className="text-xs sm:text-sm font-normal text-slate-500">/ month</span>
+                <p className="text-3xl sm:text-4xl font-[family-name:var(--font-outfit)] font-light text-white mt-3 tracking-tight transition-colors duration-500">
+                  {formatCurrency(delayResult.requiredSipToCatchUp)} <span className="text-xs sm:text-sm font-normal text-[#A3B5D9]">/ month</span>
                 </p>
-                <p className="text-xs text-amber-800 font-semibold mt-2.5 bg-amber-100/30 px-3 py-1.5 rounded-lg border border-amber-200/30">
+                <p className="text-xs text-[#D4AF37] font-light mt-2.5 bg-[#D4AF37]/10 px-3 py-1.5 rounded-lg border border-[#D4AF37]/20">
                   ⚠️ That&apos;s an extra <strong>{formatCurrency(delayResult.sipPremium)}/month</strong> (+{Math.round((delayResult.sipPremium / monthlyInvestment) * 100)}% higher commitment) for the remaining {years - delayYears} years.
                 </p>
               </div>
-              <div className="mt-6 flex flex-col sm:flex-row items-center gap-3 border-t border-amber-100/50 pt-4">
+              <div className="mt-6 flex flex-col sm:flex-row items-center gap-3 border-t border-[#D4AF37]/20 pt-4">
                 <a
                   href={brand.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary text-xs w-full text-center py-3 px-4 font-bold flex items-center justify-center gap-2 group shadow-md shadow-orange-500/10 cursor-pointer"
+                  className="btn-primary text-xs w-full text-center py-3 px-4 font-light flex items-center justify-center gap-2 group shadow-md shadow-orange-500/10 cursor-pointer"
                 >
                   <span>Start Now & Avoid this Loss</span>
                   <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>

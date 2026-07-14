@@ -57,13 +57,13 @@ export default function AboutPage() {
   const top3 = whyChooseUs.slice(0, 3);
 
   return (
-    <div className="bg-[#040F2D] text-white min-h-screen">
+    <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen transition-colors duration-500">
       {/* ═══ HERO ═══ */}
       <section className="relative overflow-hidden pt-36 pb-20 sm:pt-40 sm:pb-24 bg-transparent">
         {/* Background effects */}
         <div className="absolute inset-0 select-none pointer-events-none z-0">
           <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-orange-50/20 rounded-full blur-[120px] animate-pulse-glow" />
-          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-[#040F2D]/30 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: "2s" }} />
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-[var(--foreground)]/5 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: "2s" }} />
         </div>
 
         {/* Desktop-only: Immersive Independent Visual Background - fades and overlaps behind grid */}
@@ -75,11 +75,11 @@ export default function AboutPage() {
             className="object-cover object-center"
             priority
           />
-          {/* 360-degree soft gradient disappearing masks to blend visual perfectly into #040F2D */}
-          <div className="absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[#040F2D] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[#040F2D] to-transparent" />
-          <div className="absolute inset-x-0 top-0 h-24 sm:h-32 bg-gradient-to-b from-[#040F2D] via-[#040F2D]/40 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-32 bg-gradient-to-t from-[#040F2D] via-[#040F2D]/40 to-transparent" />
+          {/* 360-degree soft gradient disappearing masks to blend visual perfectly into background */}
+          <div className="absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[var(--background)] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[var(--background)] to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-24 sm:h-32 bg-gradient-to-b from-[var(--background)] via-[var(--background)]/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-32 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/40 to-transparent" />
         </div>
 
         {/* Grid pattern */}
@@ -96,19 +96,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Content Column (55% width) */}
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 lg:max-w-[680px]">
-              <span className="text-xs font-bold text-[#D4AF37] tracking-[0.2em] uppercase leading-none">
+              <span className="text-xs font-light text-[var(--foreground)] tracking-[0.2em] uppercase leading-none">
                 Who We Are
               </span>
               
-              <h1 className="font-[family-name:var(--font-serif)] text-5xl sm:text-6xl lg:text-[3.75rem] font-bold text-white leading-[1.1] tracking-tight">
-                <span className="text-[#D4AF37]">Wealth Acumen</span>
+              <h1 className="font-[family-name:var(--font-serif)] text-5xl sm:text-6xl lg:text-[3.75rem] font-light text-[var(--foreground)] leading-[1.1] tracking-tight">
+                <span className="text-[var(--foreground)]">Wealth Acumen</span>
               </h1>
 
-              <div className="space-y-4 text-base text-[#A3B5D9] leading-relaxed font-normal">
-                <p className="text-xl sm:text-2xl font-semibold text-white leading-snug">
+              <div className="space-y-4 text-base text-[var(--theme-text-muted)] leading-relaxed font-normal">
+                <p className="text-xl sm:text-2xl font-light text-[var(--foreground)] leading-snug">
                   Guiding your financial journey with trust, clarity and purpose.
                 </p>
-                <p className="text-base sm:text-[1.1rem] leading-relaxed text-[#C7D4ED]">
+                <p className="text-base sm:text-[1.1rem] leading-relaxed text-[var(--theme-text-muted)]">
                   At Wealth Acumen, we believe that smart investing begins with the right guidance. As a trusted partner in your financial journey, we help you make informed decisions, achieve your goals and build long-term wealth for a secure future.
                 </p>
               </div>
@@ -118,10 +118,10 @@ export default function AboutPage() {
                 {/* Pillar 1 */}
                 <div className="flex flex-col space-y-2">
                   <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">01</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-bold text-white">
+                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Client First
                   </h3>
-                  <p className="text-xs text-[#A3B5D9] leading-relaxed">
+                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
                     Your goals are our priority. We put your interests first.
                   </p>
                 </div>
@@ -129,10 +129,10 @@ export default function AboutPage() {
                 {/* Pillar 2 */}
                 <div className="flex flex-col space-y-2">
                   <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">02</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-bold text-white">
+                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Transparent Advice
                   </h3>
-                  <p className="text-xs text-[#A3B5D9] leading-relaxed">
+                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
                     Honest, unbiased and clear guidance you can always rely on.
                   </p>
                 </div>
@@ -140,10 +140,10 @@ export default function AboutPage() {
                 {/* Pillar 3 */}
                 <div className="flex flex-col space-y-2">
                   <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">03</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-bold text-white">
+                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Goal Based Approach
                   </h3>
-                  <p className="text-xs text-[#A3B5D9] leading-relaxed">
+                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
                     Personalized strategies designed around your dreams and needs.
                   </p>
                 </div>
@@ -151,10 +151,10 @@ export default function AboutPage() {
                 {/* Pillar 4 */}
                 <div className="flex flex-col space-y-2">
                   <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">04</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-bold text-white">
+                  <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Long Term Growth
                   </h3>
-                  <p className="text-xs text-[#A3B5D9] leading-relaxed">
+                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
                     Focused on creating sustainable wealth and financial independence.
                   </p>
                 </div>
@@ -186,7 +186,7 @@ export default function AboutPage() {
               <p className="text-sm font-medium text-[#D4AF37] tracking-wider uppercase mb-3">
                 Our Purpose
               </p>
-              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-light text-[var(--foreground)]">
                 Our <span className="gradient-text">Mission</span>
               </h2>
             </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                   </svg>
                 </div>
-                <p className="text-[#C7D4ED] leading-relaxed text-base sm:text-lg">
+                <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg">
                   {aboutContent.missionFull}
                 </p>
               </div>
@@ -217,7 +217,7 @@ export default function AboutPage() {
               <p className="text-sm font-medium text-[#D4AF37] tracking-wider uppercase mb-3">
                 Partnership
               </p>
-              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-light text-[var(--foreground)]">
                 Angel One <span className="gradient-text">Channel Partner</span>
               </h2>
             </div>
@@ -225,11 +225,11 @@ export default function AboutPage() {
  
           <FadeInSection delay={0.1}>
             <div className="glass rounded-2xl p-8 md:p-12">
-              <p className="text-[#C7D4ED] leading-relaxed text-base sm:text-lg mb-8">
+              <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg mb-8">
                 {aboutContent.angelOnePartnership}
               </p>
  
-              <h3 className="font-[family-name:var(--font-outfit)] text-lg font-semibold text-white mb-5">
+              <h3 className="font-[family-name:var(--font-outfit)] text-lg font-light text-[var(--foreground)] mb-5">
                 Through this partnership, I aim to provide my clients with:
               </h3>
  
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 {aboutContent.angelOneBenefits.map((benefit, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1.5 w-2 h-2 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#C59B27] flex-shrink-0" />
-                    <span className="text-[#A3B5D9] leading-relaxed">
+                    <span className="text-[var(--theme-text-muted)] leading-relaxed">
                       {benefit}
                     </span>
                   </li>
@@ -259,7 +259,7 @@ export default function AboutPage() {
               <p className="text-sm font-medium text-[#D4AF37] tracking-wider uppercase mb-3">
                 Meet the Founder
               </p>
-              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-light text-[var(--foreground)]">
                 The Mind Behind <span className="gradient-text-amber">Wealth Acumen</span>
               </h2>
             </div>
@@ -268,14 +268,14 @@ export default function AboutPage() {
           <FadeInSection delay={0.15}>
             <div className="glass glass-hover rounded-2xl p-8 md:p-12 text-center">
               {/* Avatar */}
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#C59B27] flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#C59B27] flex items-center justify-center text-white text-3xl font-light mx-auto mb-6">
                 {proprietor.name
                   .split(" ")
                   .map((n) => n.charAt(0))
                   .join("")}
               </div>
  
-              <h3 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-bold text-white mb-2">
+              <h3 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-light text-[var(--foreground)] mb-2">
                 {proprietor.name}
               </h3>
  
@@ -283,7 +283,7 @@ export default function AboutPage() {
                 Proprietor, {brand.name}
               </p>
  
-              <p className="text-[#A3B5D9] leading-relaxed max-w-2xl mx-auto">
+              <p className="text-[var(--theme-text-muted)] leading-relaxed max-w-2xl mx-auto">
                 {proprietor.bio}
               </p>
             </div>

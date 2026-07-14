@@ -18,7 +18,7 @@ export function AnimatedSentenceHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[100dvh] pt-32 pb-20 flex flex-col justify-center items-center bg-[#FAFAFA] overflow-hidden">
+    <section className="relative min-h-[100dvh] pt-32 pb-20 flex flex-col justify-center items-center bg-[var(--background)] transition-colors duration-500 overflow-hidden">
       
       {/* Ultra Minimal Background Mesh */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -35,7 +35,7 @@ export function AnimatedSentenceHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-7xl md:text-8xl lg:text-[100px] leading-[1.3] sm:leading-[1.3] font-bold text-white tracking-tight">
+            <h1 className="font-[family-name:var(--font-playfair)] text-5xl sm:text-7xl md:text-8xl lg:text-[100px] leading-[1.3] sm:leading-[1.3] font-light text-[var(--foreground)] tracking-tight">
               Helping You <br className="hidden sm:block" />
               <div className="inline-flex flex-col justify-center h-[1.3em] sm:h-[1.2em] overflow-hidden align-bottom text-[#D4AF37] relative my-2 sm:my-6 px-2 sm:px-4 mx-[-8px] sm:mx-[-16px]">
                 <AnimatePresence mode="wait">
@@ -59,7 +59,7 @@ export function AnimatedSentenceHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="mt-8 max-w-2xl mx-auto text-lg sm:text-xl text-slate-500 font-medium tracking-wide"
+            className="mt-8 max-w-2xl mx-auto text-lg sm:text-xl text-[var(--theme-text-muted)] font-medium tracking-wide"
           >
             A strategic, elegant approach to securing your financial future. Expert guidance mapped directly to your life's greatest milestones.
           </motion.p>
@@ -82,7 +82,7 @@ export function AnimatedSentenceHero() {
           </a>
           <Link
             href="/services"
-            className="w-full sm:w-auto bg-[#040F2D] hover:bg-[#FFF9F0] text-[#D4AF37] border border-[#D4AF37] font-medium text-lg py-4 px-10 rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-sm shadow-[#D9791A]/5"
+            className="w-full sm:w-auto bg-[var(--secondary-bg)] hover:bg-[var(--glass-hover-bg)] text-[#D4AF37] border border-[var(--glass-border)] font-medium text-lg py-4 px-10 rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-sm shadow-[#D9791A]/5"
           >
             Explore Services &rarr;
           </Link>

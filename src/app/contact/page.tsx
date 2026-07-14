@@ -44,7 +44,7 @@ export default function ContactPage() {
               {/* Contact Details Card */}
               <FadeInSection delay={0.1}>
                 <div className="glass glass-hover rounded-2xl p-8">
-                  <h2 className="font-[family-name:var(--font-outfit)] text-xl font-semibold text-white mb-6">
+                  <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-white mb-6">
                     Contact Information
                   </h2>
 
@@ -107,7 +107,7 @@ export default function ContactPage() {
               {/* Social Links */}
               <FadeInSection delay={0.2}>
                 <div className="glass glass-hover rounded-2xl p-8">
-                  <h2 className="font-[family-name:var(--font-outfit)] text-xl font-semibold text-white mb-6">
+                  <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-white mb-6">
                     Connect With Us
                   </h2>
 
@@ -124,7 +124,7 @@ export default function ContactPage() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-white group-hover:text-pink-600 transition-colors">Instagram</p>
+                        <p className="text-sm font-light text-white group-hover:text-pink-600 transition-colors">Instagram</p>
                         <p className="text-xs text-slate-500">Follow us</p>
                       </div>
                     </a>
@@ -141,7 +141,7 @@ export default function ContactPage() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-white group-hover:text-green-600 transition-colors">WhatsApp</p>
+                        <p className="text-sm font-light text-white group-hover:text-green-600 transition-colors">WhatsApp</p>
                         <p className="text-xs text-slate-500">Chat now</p>
                       </div>
                     </a>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-amber-500/10" />
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D9791A]/50 to-transparent" />
                   <div className="relative z-10">
-                    <h2 className="font-[family-name:var(--font-outfit)] text-xl font-semibold text-white mb-3">
+                    <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-white mb-3">
                       Open a Demat Account
                     </h2>
                     <p className="text-sm text-[#A3B5D9] leading-relaxed mb-5">
@@ -180,7 +180,7 @@ export default function ContactPage() {
             {/* Right: Contact Form */}
             <FadeInSection delay={0.15}>
               <div className="glass rounded-2xl p-8 md:p-10 h-fit">
-                <h2 className="font-[family-name:var(--font-outfit)] text-xl font-semibold text-white mb-2">
+                <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-white mb-2">
                   Send Us a Message
                 </h2>
                 <p className="text-sm text-slate-500 mb-8">

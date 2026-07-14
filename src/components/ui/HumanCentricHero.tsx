@@ -27,10 +27,10 @@ export function HumanCentricHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
-          <p className="font-sans text-white/60 font-semibold tracking-widest uppercase mb-6 text-sm">
+          <p className="font-sans text-white/60 font-light tracking-widest uppercase mb-6 text-sm">
             Wealth Acumen Advisory
           </p>
-          <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-semibold text-white leading-[1.05] tracking-[-0.03em] mb-6">
+          <h1 className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-light text-white leading-[1.05] tracking-[-0.03em] mb-6">
             Wealth that <br className="hidden sm:block" /> spans generations.
           </h1>
           <p className="font-sans text-lg md:text-2xl text-white/80 max-w-2xl mx-auto font-normal leading-snug tracking-tight mb-10">

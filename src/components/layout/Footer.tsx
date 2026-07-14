@@ -22,7 +22,7 @@ export function Footer() {
                 height={48}
                 className="rounded-xl bg-[#0B1736] p-1 border border-[#D4AF37]/20"
               />
-              <span className="font-[family-name:var(--font-playfair)] font-bold text-2xl tracking-wide text-white">
+              <span className="font-[family-name:var(--font-playfair)] font-light text-2xl tracking-wide text-white">
                 {brand.name}
               </span>
             </Link>
@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h3 className="font-[family-name:var(--font-outfit)] font-semibold text-white mb-6 uppercase tracking-wider text-xs">
+            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-6 uppercase tracking-wider text-xs">
               Quick Links
             </h3>
             <ul className="space-y-4">
@@ -86,7 +86,7 @@ export function Footer() {
 
           {/* Services */}
           <div className="lg:col-span-3">
-            <h3 className="font-[family-name:var(--font-outfit)] font-semibold text-white mb-6 uppercase tracking-wider text-xs">
+            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-6 uppercase tracking-wider text-xs">
               Our Services
             </h3>
             <ul className="space-y-4">
@@ -113,7 +113,7 @@ export function Footer() {
 
           {/* Contact & Legal */}
           <div className="lg:col-span-3">
-            <h3 className="font-[family-name:var(--font-outfit)] font-semibold text-white mb-6 uppercase tracking-wider text-xs">
+            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-6 uppercase tracking-wider text-xs">
               Contact
             </h3>
             <ul className="space-y-4 text-sm text-white/60 font-light">

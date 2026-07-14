@@ -22,7 +22,7 @@ export function WealthOrbitHero() {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#040F2D] pt-24 pb-20">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[var(--background)] transition-colors duration-500 pt-24 pb-20">
       {/* Premium Noise Overlay */}
       <div className="absolute inset-0 z-0 opacity-[0.25] mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }} />
 
@@ -45,7 +45,7 @@ export function WealthOrbitHero() {
         
         {/* Abstract Animated Market Chart (Subtle) */}
         <div className="absolute bottom-0 left-0 right-0 h-[60%] flex items-end justify-between px-[5%] opacity-[0.03] overflow-hidden mask-image:linear-gradient(to_top,black,transparent)">
-          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-[#040F2D]/50 to-[#040F2D] z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent via-[var(--background)]/50 to-[var(--background)] z-10" />
           {[...Array(40)].map((_, i) => {
             // Predictable pseudo-random heights based on index to avoid hydration mismatch if needed, but framer-motion handles it client-side usually.
             const h1 = 20 + ((i * 17) % 60);
@@ -96,12 +96,12 @@ export function WealthOrbitHero() {
           >
             <motion.div variants={textVariants} className="flex items-center justify-center lg:justify-start gap-3 mb-6">
               <span className="h-[1px] w-12 bg-[#D4AF37]"></span>
-              <span className="text-[#D4AF37] font-bold tracking-[0.2em] text-sm uppercase">Find Your True North</span>
+              <span className="text-[#D4AF37] font-light tracking-[0.2em] text-sm uppercase">Find Your True North</span>
             </motion.div>
             
             <motion.h1 
               variants={textVariants}
-              className="font-sans tracking-tight text-5xl sm:text-6xl lg:text-7xl xl:text-[4.5rem] font-bold text-white leading-[1.1] mb-6"
+              className="font-sans tracking-tight text-5xl sm:text-6xl lg:text-7xl xl:text-[4.5rem] font-light text-[var(--foreground)] leading-[1.1] mb-6"
             >
               Our Wealth <br className="hidden lg:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] bg-[length:200%_auto] animate-gradient-x block mt-3 text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] leading-[1.2]">
@@ -111,7 +111,7 @@ export function WealthOrbitHero() {
             
             <motion.p 
               variants={textVariants}
-              className="text-lg text-[#A3B5D9] max-w-lg mx-auto lg:mx-0 leading-relaxed mb-10 font-light"
+              className="text-lg text-[var(--theme-text-muted)] max-w-lg mx-auto lg:mx-0 leading-relaxed mb-10 font-light"
             >
               Explore our comprehensive range of bespoke financial solutions designed to help you achieve lasting wealth and freedom.
             </motion.p>
@@ -123,7 +123,7 @@ export function WealthOrbitHero() {
               <Link 
                 href={brand.whatsapp}
                 target="_blank"
-                className="group relative overflow-hidden bg-[#D4AF37] text-[#040F2D] font-bold py-4 px-8 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto min-w-[200px]"
+                className="group relative overflow-hidden bg-[#D4AF37] text-[#040F2D] font-light py-4 px-8 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto min-w-[200px]"
               >
                 <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 <span className="relative z-10">Start Your Journey</span>
@@ -170,10 +170,10 @@ export function WealthOrbitHero() {
                           initial={{ opacity: 0, scale: 0 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 1 + (node.id * 0.1), type: "spring" }}
-                          className="flex items-center gap-2 lg:gap-3 bg-[#0B1736]/90 backdrop-blur-xl border border-white/20 hover:border-[#D4AF37] hover:bg-[#101E42] px-4 py-2.5 lg:px-5 lg:py-3 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 cursor-pointer group"
+                          className="flex items-center gap-2 lg:gap-3 bg-[var(--secondary-bg)] backdrop-blur-xl border border-[var(--glass-border)] hover:border-[#D4AF37] hover:bg-[var(--glass-hover-bg)] px-4 py-2.5 lg:px-5 lg:py-3 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer group"
                         >
                           <node.Icon className="w-4 h-4 lg:w-5 lg:h-5 text-[#D4AF37] group-hover:scale-110 transition-transform" />
-                          <span className="text-[11px] lg:text-xs font-bold tracking-wider uppercase text-white whitespace-nowrap">{node.label}</span>
+                          <span className="text-[11px] lg:text-xs font-light tracking-wider uppercase text-[var(--foreground)] whitespace-nowrap">{node.label}</span>
                         </motion.div>
                       </motion.div>
                     </div>
@@ -187,7 +187,7 @@ export function WealthOrbitHero() {
               <motion.div 
                 animate={{ scale: [1, 1.02, 1] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#ffffff10] to-[#00000060] shadow-[inset_0_0_40px_rgba(255,255,255,0.15),_0_20px_50px_rgba(0,0,0,0.5),_0_0_60px_rgba(212,175,55,0.2)] backdrop-blur-2xl border border-white/20"
+                className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex items-center justify-center bg-[#040F2D] shadow-[inset_0_0_40px_rgba(255,255,255,0.15),_0_20px_50px_rgba(0,0,0,0.5),_0_0_60px_rgba(212,175,55,0.2)] backdrop-blur-2xl border border-[#D4AF37]"
               >
                 {/* 3D Sphere Inner Highlights */}
                 <div className="absolute top-[-10%] left-[-10%] w-[120%] h-[120%] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.2)_0%,transparent_50%)]" />

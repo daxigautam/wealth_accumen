@@ -34,7 +34,7 @@ function FadeInSection({
 
 export default function BlogPage() {
   return (
-    <div className="bg-[#040F2D] text-white min-h-screen">
+    <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen transition-colors duration-500">
       <LightPremiumBlogHero />
 
       {/* ═══ BLOG POSTS GRID ═══ */}
@@ -68,14 +68,14 @@ export default function BlogPage() {
 
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs text-slate-500">{post.date}</span>
-                      <span className="w-1 h-1 rounded-full bg-slate-600" />
-                      <span className="text-xs text-slate-500">{post.author}</span>
+                      <span className="text-xs text-[var(--theme-text-muted)]">{post.date}</span>
+                      <span className="w-1 h-1 rounded-full bg-[var(--theme-text-muted)] opacity-50" />
+                      <span className="text-xs text-[var(--theme-text-muted)]">{post.author}</span>
                     </div>
-                    <h2 className="font-[family-name:var(--font-outfit)] text-lg font-semibold text-white mb-3 group-hover:text-[#D4AF37] transition-colors line-clamp-2">
+                    <h2 className="font-[family-name:var(--font-outfit)] text-lg font-light text-[var(--foreground)] mb-3 group-hover:text-[#D4AF37] transition-colors line-clamp-2">
                       {post.title}
                     </h2>
-                    <p className="text-sm text-[#A3B5D9] leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-sm text-[var(--theme-text-muted)] leading-relaxed line-clamp-3 mb-4">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center gap-1.5 text-sm text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity">

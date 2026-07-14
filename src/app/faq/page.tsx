@@ -54,7 +54,7 @@ function AccordionItem({
         className="w-full flex items-center justify-between gap-4 p-6 sm:p-7 text-left group cursor-pointer"
         aria-expanded={isOpen}
       >
-        <span className="font-[family-name:var(--font-outfit)] text-base sm:text-lg font-semibold text-[#040F2D] group-hover:text-[#D4AF37] transition-colors">
+        <span className="font-[family-name:var(--font-outfit)] text-base sm:text-lg font-light text-[#040F2D] group-hover:text-[#D4AF37] transition-colors">
           {question}
         </span>
         <span
@@ -126,7 +126,7 @@ export default function FAQPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6 text-white"
+            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-light leading-tight tracking-tight mb-6 text-[#040F2D]"
           >
             <span className="gradient-text-amber">Frequently Asked</span> Questions
           </motion.h1>
@@ -135,7 +135,7 @@ export default function FAQPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg text-[#A3B5D9] max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-[#040F2D] max-w-2xl mx-auto leading-relaxed"
           >
             Have questions about our services? Find answers to the most common
             queries below.

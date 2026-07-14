@@ -53,7 +53,7 @@ export default function DisclosurePage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-4 text-white"
+            className="font-[family-name:var(--font-outfit)] text-4xl sm:text-5xl md:text-6xl font-light leading-tight tracking-tight mb-4 text-white"
           >
             {disclosureContent.title}
           </motion.h1>
@@ -80,7 +80,7 @@ export default function DisclosurePage() {
                 {disclosureContent.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <span className="w-8 h-8 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-sm font-semibold text-[#D4AF37]">
+                      <span className="text-sm font-light text-[#D4AF37]">
                         {i + 1}
                       </span>
                     </span>
