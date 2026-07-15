@@ -176,7 +176,7 @@ export default function HomePage() {
                   <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" alt="Financial Advisor" className="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-8 left-8 right-8">
-                    <p className="text-[var(--foreground)] transition-colors duration-500 text-lg font-[family-name:var(--font-playfair)] italic">&quot;Wealth is not just about money. It&apos;s about freedom, security, and legacy.&quot;</p>
+                    <p className="text-white transition-colors duration-500 text-lg font-[family-name:var(--font-playfair)] italic">&quot;Wealth is not just about money. It&apos;s about freedom, security, and legacy.&quot;</p>
                     <div className="mt-4 flex items-center gap-4">
                       <div className="h-px flex-1 bg-[var(--background)] transition-colors duration-500/30" />
                       <p className="text-white/80 text-xs font-light tracking-widest uppercase">Wealth Acumen</p>
@@ -317,15 +317,15 @@ export default function HomePage() {
             
             {/* 1. Equity */}
             <FadeIn delay={0.1} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/equity" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/equity" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white hover:bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 shadow-sm">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 group-hover:bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:text-white group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
                     <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-white mb-2 sm:mb-3">Equity Advisory</h3>
-                    <p className="text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Exclusive access to premium equity research, portfolio strategies, and direct market participation.</p>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-[#040F2D] group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3">Equity Advisory</h3>
+                    <p className="text-gray-600 group-hover:text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Exclusive access to premium equity research, portfolio strategies, and direct market participation.</p>
                   </div>
                 </div>
               </Link>
@@ -333,15 +333,15 @@ export default function HomePage() {
 
             {/* 2. Mutual Funds */}
             <FadeIn delay={0.2} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/mutual-funds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/mutual-funds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white hover:bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-sm">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 group-hover:bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-sm">
                     <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" /><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" /></svg>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-white mb-2 sm:mb-3">Mutual Funds</h3>
-                    <p className="text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Curated selection of top-tier funds perfectly aligned with your long-term life goals.</p>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-[#040F2D] group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3">Mutual Funds</h3>
+                    <p className="text-gray-600 group-hover:text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Curated selection of top-tier funds perfectly aligned with your long-term life goals.</p>
                   </div>
                 </div>
               </Link>
@@ -349,15 +349,15 @@ export default function HomePage() {
 
             {/* 3. ETFs */}
             <FadeIn delay={0.3} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/etfs" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/etfs" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white hover:bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 shadow-sm">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 group-hover:bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:text-white group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
                     <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" /></svg>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-white mb-2 sm:mb-3">ETFs</h3>
-                    <p className="text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Smart, low-cost diversification across global markets for maximum returns.</p>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-[#040F2D] group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3">ETFs</h3>
+                    <p className="text-gray-600 group-hover:text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Smart, low-cost diversification across global markets for maximum returns.</p>
                   </div>
                 </div>
               </Link>
@@ -365,15 +365,15 @@ export default function HomePage() {
 
             {/* 4. Insurance */}
             <FadeIn delay={0.4} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/insurance" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/insurance" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white hover:bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-sm">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 group-hover:bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-sm">
                     <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-white mb-2 sm:mb-3">Insurance</h3>
-                    <p className="text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Comprehensive protection for your wealth, life, and future generations.</p>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-[#040F2D] group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3">Insurance</h3>
+                    <p className="text-gray-600 group-hover:text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Comprehensive protection for your wealth, life, and future generations.</p>
                   </div>
                 </div>
               </Link>
@@ -381,15 +381,15 @@ export default function HomePage() {
             
             {/* 5. Bonds */}
             <FadeIn delay={0.5} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/bonds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/bonds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white hover:bg-[#040F2D] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500 shadow-sm">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 group-hover:bg-white/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:text-white group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
                     <svg className="w-7 h-7 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-white mb-2 sm:mb-3">Fixed Income</h3>
-                    <p className="text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Stable, predictable yields and absolute peace of mind for conservative allocation.</p>
+                    <h3 className="font-[family-name:var(--font-playfair)] text-xl sm:text-2xl font-light text-[#040F2D] group-hover:text-white transition-colors duration-500 mb-2 sm:mb-3">Fixed Income</h3>
+                    <p className="text-gray-600 group-hover:text-[#A3B5D9] transition-colors duration-500 text-sm sm:text-base line-clamp-3">Stable, predictable yields and absolute peace of mind for conservative allocation.</p>
                   </div>
                 </div>
               </Link>
@@ -403,7 +403,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════ */}
       {/*        LEARNING & DOWNLOADS SECTION          */}
       {/* ═══════════════════════════════════════════ */}
-      <section id="empower" className="pt-12 pb-24 sm:pt-16 sm:pb-32 bg-[var(--background)] transition-colors duration-500 relative overflow-hidden">
+      <section id="empower" className="pt-12 pb-12 sm:pt-16 sm:pb-16 bg-[var(--background)] transition-colors duration-500 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -412,7 +412,7 @@ export default function HomePage() {
               <div className="h-px w-10 bg-gradient-to-l from-transparent to-[#D9791A]/40" />
             </div>
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl font-light text-center mb-16 leading-tight text-[#D4AF37]">
-              Knowledge & <span className="italic">Insights</span>
+              <span className="text-[#040F2D]">Knowledge</span> & <span className="italic">Insights</span>
             </h2>
           </FadeIn>
 
@@ -463,7 +463,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════ */}
       {/*               BLOGS SECTION                  */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="py-24 sm:py-32 bg-[var(--background)] transition-colors duration-500 relative overflow-hidden">
+      <section className="pt-12 pb-12 sm:pt-16 sm:pb-16 bg-[var(--background)] transition-colors duration-500 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <FadeIn>
@@ -552,7 +552,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════ */}
       {/*             TESTIMONIALS                   */}
       {/* ═══════════════════════════════════════════ */}
-      <section className="py-24 sm:py-32 bg-[var(--background)] transition-colors duration-500 relative overflow-hidden">
+      <section className="pt-12 pb-24 sm:pt-16 sm:pb-32 bg-[var(--background)] transition-colors duration-500 relative overflow-hidden">
         {/* Subtle luxury mesh background */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#D9791A 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         
@@ -657,8 +657,8 @@ export default function HomePage() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                         </svg>
                       </span>
-                      <span className="text-[11px] sm:text-xs font-light text-slate-500 leading-snug">
-                        AMFI Registered<br /><span className="text-[#C7D4ED]">Distributor</span>
+                      <span className="text-[11px] sm:text-xs font-light text-[#040F2D] leading-snug">
+                        AMFI Registered<br /><span className="text-[#040F2D]">Distributor</span>
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
@@ -668,8 +668,8 @@ export default function HomePage() {
                           <circle cx="12" cy="12" r="3" />
                         </svg>
                       </span>
-                      <span className="text-[11px] sm:text-xs font-light text-slate-500 leading-snug">
-                        Personalized<br /><span className="text-[#C7D4ED]">Strategy</span>
+                      <span className="text-[11px] sm:text-xs font-light text-[#040F2D] leading-snug">
+                        Personalized<br /><span className="text-[#040F2D]">Strategy</span>
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
@@ -678,8 +678,8 @@ export default function HomePage() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22" />
                         </svg>
                       </span>
-                      <span className="text-[11px] sm:text-xs font-light text-slate-500 leading-snug">
-                        Long-term<br /><span className="text-[#C7D4ED]">Wealth Focus</span>
+                      <span className="text-[11px] sm:text-xs font-light text-[#040F2D] leading-snug">
+                        Long-term<br /><span className="text-[#040F2D]">Wealth Focus</span>
                       </span>
                     </div>
                   </div>
@@ -687,25 +687,18 @@ export default function HomePage() {
 
                 {/* Right Illustration and Stats Card Column */}
                 <div className="lg:col-span-5 flex flex-col items-center gap-6">
-                  {/* Floating 3D Illustration Graphic */}
+                  {/* Professional Image */}
                   <div className="relative w-full aspect-[4/3] flex items-center justify-center select-none">
-                    {/* Circle Backdrop Glow */}
-                    <div className="absolute w-72 h-72 rounded-full bg-slate-100/60 blur-[40px] pointer-events-none" />
-                    
-                    <motion.div
-                      animate={{ y: [0, -10, 0] }}
-                      transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                      className="relative w-full h-full max-w-[340px]"
-                    >
+                    <div className="relative w-full h-full max-w-[380px] rounded-[2rem] overflow-hidden shadow-2xl border border-[#D4AF37]/20">
                       <Image
-                        src="/assets/images/cta-3d-graphic.png"
-                        alt="Wealth Acumen Dashboard graphic"
+                        src="/assets/images/deal_handshake.png"
+                        alt="Wealth Management Professionals"
                         fill
-                        className="object-contain"
+                        className="object-cover hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 1024px) 100vw, 35vw"
                         priority
                       />
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Horizontal 4-Column Stats Card */}
@@ -718,8 +711,8 @@ export default function HomePage() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.109A11.386 11.386 0 0012 21c-2.829 0-5.437-.893-7.563-2.4a9.338 9.338 0 0113.813-2.493M14 9.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
                           </svg>
                         </div>
-                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-slate-800 tracking-tight">500+</p>
-                        <p className="text-[10px] font-light text-[#8B9ECC] mt-0.5 leading-none">Happy Investors</p>
+                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-[#040F2D] tracking-tight">500+</p>
+                        <p className="text-[10px] font-light text-[#040F2D] mt-0.5 leading-none">Happy Investors</p>
                       </div>
 
                       {/* Stat 2 */}
@@ -727,8 +720,8 @@ export default function HomePage() {
                         <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 mb-2 mx-auto shadow-sm">
                           <span className="text-xs font-light font-sans">₹</span>
                         </div>
-                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-slate-800 tracking-tight">₹100Cr+</p>
-                        <p className="text-[10px] font-light text-[#8B9ECC] mt-0.5 leading-none">Assets Guided</p>
+                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-[#040F2D] tracking-tight">₹100Cr+</p>
+                        <p className="text-[10px] font-light text-[#040F2D] mt-0.5 leading-none">Assets Guided</p>
                       </div>
 
                       {/* Stat 3 */}
@@ -738,8 +731,8 @@ export default function HomePage() {
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                           </svg>
                         </div>
-                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-slate-800 tracking-tight">4+</p>
-                        <p className="text-[10px] font-light text-[#8B9ECC] mt-0.5 leading-none">Years Experience</p>
+                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-[#040F2D] tracking-tight">4+</p>
+                        <p className="text-[10px] font-light text-[#040F2D] mt-0.5 leading-none">Years Experience</p>
                       </div>
 
                       {/* Stat 4 */}
@@ -749,8 +742,8 @@ export default function HomePage() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                           </svg>
                         </div>
-                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-slate-800 tracking-tight">98%</p>
-                        <p className="text-[10px] font-light text-[#8B9ECC] mt-0.5 leading-none">Client Sat.</p>
+                        <p className="text-lg font-[family-name:var(--font-outfit)] font-light text-[#040F2D] tracking-tight">98%</p>
+                        <p className="text-[10px] font-light text-[#040F2D] mt-0.5 leading-none">Client Sat.</p>
                       </div>
                     </div>
                   </div>

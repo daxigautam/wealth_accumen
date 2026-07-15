@@ -91,8 +91,8 @@ export default function DownloadsPage() {
         </div>
       </section>
 
-      {/* ═══ CHECK KYC STATUS ═══ */}
-      <section className="section-padding pt-8 pb-12">
+      {/* ═══ KRA STATUS ═══ */}
+      <section className="pt-12 pb-8 sm:pt-16 sm:pb-12">
         <div className="max-w-6xl mx-auto">
           <FadeInSection>
             <div className="mb-10">
@@ -147,7 +147,7 @@ export default function DownloadsPage() {
       </section>
 
       {/* ═══ VALIDATE KYC ═══ */}
-      <section className="section-padding py-12 bg-gradient-to-b from-transparent via-[#D9791A]/[0.015] to-transparent">
+      <section className="py-8 sm:py-12 bg-gradient-to-b from-transparent via-[#D9791A]/[0.015] to-transparent">
         <div className="max-w-6xl mx-auto">
           <FadeInSection>
             <div className="mb-10">
@@ -202,7 +202,7 @@ export default function DownloadsPage() {
       </section>
 
       {/* ═══ DOWNLOAD FORMS ═══ */}
-      <section className="section-padding py-12">
+      <section className="pt-8 pb-16 sm:pt-12 sm:pb-24">
         <div className="max-w-6xl mx-auto">
           <FadeInSection>
             <div className="mb-10">

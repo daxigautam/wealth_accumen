@@ -256,10 +256,10 @@ export default function ServicePageClient({ slug }: { slug: string }) {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-amber-500/10" />
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[#D9791A]/50 to-transparent" />
               <div className="relative z-10">
-                <h2 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl font-light text-white mb-4">
+                <h2 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl font-light text-[var(--foreground)] mb-4">
                   Interested in {service.title}?
                 </h2>
-                <p className="text-[#A3B5D9] mb-8 max-w-xl mx-auto">
+                <p className="text-[var(--theme-text-muted)] mb-8 max-w-xl mx-auto">
                   Get personalized guidance from our team. We are here to help you make informed investment decisions.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

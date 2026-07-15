@@ -33,7 +33,7 @@ function InteractiveBar({ index, total, mouseXProgress }: { index: number, total
 
   return (
     <motion.div 
-      className="flex-1 mx-[2px] sm:mx-[4px] md:mx-1.5 bg-gradient-to-t from-[#040F2D]/20 via-[#040F2D]/70 to-[#040F2D] rounded-t-sm origin-bottom"
+      className="flex-1 mx-[2px] sm:mx-[4px] md:mx-1.5 bg-gradient-to-t from-[var(--foreground)]/70 to-[var(--foreground)] rounded-t-sm origin-bottom transition-colors duration-300"
       style={{ 
         height: useTransform(heightPercent, v => `${v}%`),
         opacity: opacity,

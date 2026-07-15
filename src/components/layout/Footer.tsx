@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { brand } from "@/config/brand";
+import { FooterThemeToggle } from "./FooterThemeToggle";
 
 export function Footer() {
   return (
@@ -31,7 +32,7 @@ export function Footer() {
             </p>
             
             {/* Social Links */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mb-6">
               <a
                 href={brand.instagram}
                 target="_blank"
@@ -55,6 +56,9 @@ export function Footer() {
                 </svg>
               </a>
             </div>
+            
+            {/* Theme Toggle */}
+            <FooterThemeToggle />
           </div>
 
           {/* Quick Links */}

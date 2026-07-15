@@ -67,7 +67,7 @@ export default function AboutPage() {
         </div>
 
         {/* Desktop-only: Immersive Independent Visual Background - fades and overlaps behind grid */}
-        <div className="hidden lg:block absolute inset-y-0 right-0 w-[48%] z-0 pointer-events-none select-none overflow-hidden opacity-90">
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-[55%] z-0 pointer-events-none select-none overflow-hidden opacity-90">
           <Image
             src="/assets/images/about-hero-visual.jpg"
             alt=""
@@ -76,7 +76,7 @@ export default function AboutPage() {
             priority
           />
           {/* 360-degree soft gradient disappearing masks to blend visual perfectly into background */}
-          <div className="absolute inset-y-0 left-0 w-12 sm:w-24 bg-gradient-to-r from-[var(--background)] to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-12 sm:w-16 bg-gradient-to-r from-[var(--background)] to-transparent" />
           <div className="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[var(--background)] to-transparent" />
           <div className="absolute inset-x-0 top-0 h-24 sm:h-32 bg-gradient-to-b from-[var(--background)] via-[var(--background)]/40 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-32 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/40 to-transparent" />
@@ -95,7 +95,7 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-8 xl:px-4 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Content Column (55% width) */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 lg:max-w-[680px]">
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 lg:max-w-[560px]">
               <span className="text-xs font-light text-[var(--foreground)] tracking-[0.2em] uppercase leading-none">
                 Who We Are
               </span>
@@ -121,7 +121,7 @@ export default function AboutPage() {
                   <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Client First
                   </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
+                  <p className="text-[11px] text-[var(--theme-text-muted)] leading-relaxed">
                     Your goals are our priority. We put your interests first.
                   </p>
                 </div>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Transparent Advice
                   </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
+                  <p className="text-[11px] text-[var(--theme-text-muted)] leading-relaxed">
                     Honest, unbiased and clear guidance you can always rely on.
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
                   <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Goal Based Approach
                   </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
+                  <p className="text-[11px] text-[var(--theme-text-muted)] leading-relaxed">
                     Personalized strategies designed around your dreams and needs.
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                   <h3 className="font-[family-name:var(--font-outfit)] text-sm font-light text-[var(--foreground)]">
                     Long Term Growth
                   </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
+                  <p className="text-[11px] text-[var(--theme-text-muted)] leading-relaxed">
                     Focused on creating sustainable wealth and financial independence.
                   </p>
                 </div>
@@ -179,113 +179,182 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ OUR MISSION ═══ */}
-      <section className="section-padding bg-gradient-to-b from-transparent via-[#D9791A]/[0.015] to-transparent">
-        <div className="max-w-4xl mx-auto">
+      <section className="pt-20 pb-10 sm:pt-24 sm:pb-12 bg-gradient-to-b from-transparent via-[#D9791A]/[0.015] to-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Centered Heading */}
           <FadeInSection>
-            <div className="text-center mb-10">
-              <p className="text-sm font-medium text-[#D4AF37] tracking-wider uppercase mb-3">
-                Our Purpose
-              </p>
-              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-light text-[var(--foreground)]">
-                Our <span className="gradient-text">Mission</span>
+            <div className="mb-12 md:mb-16 text-center flex flex-col items-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+                <p className="text-xs font-bold text-[#D4AF37] tracking-[0.25em] uppercase">
+                  Our Purpose
+                </p>
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-[var(--foreground)] leading-tight tracking-tight">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic">Mission</span>
               </h2>
             </div>
           </FadeInSection>
- 
-          <FadeInSection delay={0.15}>
-            <div className="glass rounded-2xl p-8 md:p-12">
-              <div className="flex items-start gap-5">
-                <div className="hidden sm:flex w-14 h-14 rounded-xl bg-[#D4AF37]/10 items-center justify-center flex-shrink-0 mt-1">
-                  <svg className="w-7 h-7 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                  </svg>
-                </div>
-                <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg">
-                  {aboutContent.missionFull}
-                </p>
+
+          {/* Connected Cohesive Card Layout */}
+          <div className="glass rounded-[2rem] overflow-hidden shadow-2xl border border-[var(--glass-border)]">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* Left side: Text content */}
+              <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                <FadeInSection delay={0.15}>
+                  <div className="flex items-start gap-5">
+                    <div className="hidden sm:flex w-14 h-14 rounded-xl bg-[#D4AF37]/10 items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-7 h-7 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                      </svg>
+                    </div>
+                    <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg">
+                      {aboutContent.missionFull}
+                    </p>
+                  </div>
+                </FadeInSection>
+              </div>
+
+              {/* Right side: Image */}
+              <div className="relative w-full h-[300px] sm:h-[400px] lg:h-auto min-h-[300px] lg:min-h-[400px] flex items-center justify-center bg-[var(--foreground)]/5 overflow-hidden">
+                <motion.div 
+                  initial={{ opacity: 0, x: 40, filter: "blur(5px)" }}
+                  whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                  transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <Image 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
+                    alt="Our Mission" 
+                    fill 
+                    className="object-cover"
+                  />
+                  {/* Subtle fade edge on the left to blend smoothly into the card on desktop */}
+                  <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[var(--background)] to-transparent lg:block hidden opacity-80" />
+                </motion.div>
               </div>
             </div>
-          </FadeInSection>
+          </div>
         </div>
       </section>
  
       {/* ═══ ANGEL ONE CHANNEL PARTNER ═══ */}
-      <section className="section-padding">
-        <div className="max-w-5xl mx-auto">
+      <section className="pt-10 pb-10 sm:pt-12 sm:pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Centered Heading */}
           <FadeInSection>
-            <div className="text-center mb-10">
-              <p className="text-sm font-medium text-[#D4AF37] tracking-wider uppercase mb-3">
-                Partnership
-              </p>
-              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-light text-[var(--foreground)]">
-                Angel One <span className="gradient-text">Channel Partner</span>
+            <div className="mb-12 md:mb-16 text-center flex flex-col items-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+                <p className="text-xs font-bold text-[#D4AF37] tracking-[0.25em] uppercase">
+                  Partnership
+                </p>
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-[var(--foreground)] leading-tight tracking-tight">
+                Angel One <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic">Channel Partner</span>
               </h2>
             </div>
           </FadeInSection>
- 
-          <FadeInSection delay={0.1}>
-            <div className="glass rounded-2xl p-8 md:p-12">
-              <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg mb-8">
-                {aboutContent.angelOnePartnership}
-              </p>
- 
-              <h3 className="font-[family-name:var(--font-outfit)] text-lg font-light text-[var(--foreground)] mb-5">
-                Through this partnership, I aim to provide my clients with:
-              </h3>
- 
-              <ul className="space-y-4">
-                {aboutContent.angelOneBenefits.map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-2 h-2 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#C59B27] flex-shrink-0" />
-                    <span className="text-[var(--theme-text-muted)] leading-relaxed">
-                      {benefit}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeInSection>
+
+          {/* Cohesive Card Layout with Floated Image */}
+          <div className="glass rounded-[2rem] overflow-hidden shadow-2xl border border-[var(--glass-border)] p-8 md:p-12 lg:p-14">
+            <FadeInSection delay={0.15}>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="float-none lg:float-right w-full lg:w-[320px] h-[200px] lg:h-[220px] lg:ml-10 lg:mb-6 mb-8 relative rounded-2xl overflow-hidden shadow-lg border border-[var(--glass-border)]"
+              >
+                <Image 
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop" 
+                  alt="Angel One Partnership Trading Platform" 
+                  fill 
+                  className="object-cover"
+                />
+              </motion.div>
+
+              <div className="text-left">
+                <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg mb-8">
+                  {aboutContent.angelOnePartnership}
+                </p>
+  
+                <h3 className="font-[family-name:var(--font-outfit)] text-lg font-medium text-[var(--foreground)] mb-5">
+                  Through this partnership, I aim to provide my clients with:
+                </h3>
+  
+                <ul className="space-y-4">
+                  {aboutContent.angelOneBenefits.map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-1.5 w-2 h-2 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#C59B27] flex-shrink-0" />
+                      <span className="text-[var(--theme-text-muted)] leading-relaxed text-sm sm:text-base">
+                        {benefit}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeInSection>
+          </div>
         </div>
       </section>
  
       {/* ═══ PROPRIETOR ═══ */}
       <section
         id="proprietor"
-        className="section-padding bg-gradient-to-b from-transparent via-cyan-500/[0.02] to-transparent"
+        className="pt-10 pb-20 sm:pt-12 sm:pb-24 bg-gradient-to-b from-transparent via-cyan-500/[0.02] to-transparent"
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
-            <div className="text-center mb-10">
-              <p className="text-sm font-medium text-[#D4AF37] tracking-wider uppercase mb-3">
-                Meet the Founder
-              </p>
-              <h2 className="font-[family-name:var(--font-serif)] text-3xl sm:text-4xl md:text-5xl font-light text-[var(--foreground)]">
-                The Mind Behind <span className="gradient-text-amber">Wealth Acumen</span>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+                <p className="text-xs font-bold text-[#D4AF37] tracking-[0.25em] uppercase">
+                  Meet the Founder
+                </p>
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-[var(--foreground)] leading-tight tracking-tight">
+                The Mind Behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic">Wealth Acumen</span>
               </h2>
             </div>
           </FadeInSection>
  
           <FadeInSection delay={0.15}>
-            <div className="glass glass-hover rounded-2xl p-8 md:p-12 text-center">
-              {/* Avatar */}
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#C59B27] flex items-center justify-center text-white text-3xl font-light mx-auto mb-6">
-                {proprietor.name
-                  .split(" ")
-                  .map((n) => n.charAt(0))
-                  .join("")}
+            <div className="glass rounded-[2rem] overflow-hidden p-8 md:p-12 lg:p-16 shadow-[0_0_40px_rgba(212,175,55,0.15)] border border-[#D4AF37]/40 bg-gradient-to-b from-[#D4AF37]/5 to-transparent relative">
+              {/* Decorative top border highlight */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80"></div>
+              
+              <div className="flex flex-col md:flex-row items-center md:items-center lg:items-start gap-8 lg:gap-14">
+                {/* Avatar */}
+                <div className="flex-shrink-0 relative w-40 h-40 sm:w-48 sm:h-48 lg:w-[260px] lg:h-[260px] rounded-full border-[4px] border-[#D4AF37] shadow-[0_15px_35px_rgba(212,175,55,0.4)] overflow-hidden mx-auto md:mx-0 mt-2">
+                  <Image 
+                    src="/assets/images/atharv_wadekar.jpeg"
+                    alt="Atharva Wadekar"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+   
+                <div className="text-center md:text-left flex-1 pt-2">
+                  <h3 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] mb-4 tracking-wide drop-shadow-sm">
+                    {proprietor.name}
+                  </h3>
+   
+                  <div className="inline-block md:block px-5 py-1.5 md:px-0 md:py-0 bg-[#D4AF37]/10 md:bg-transparent rounded-full border border-[#D4AF37]/20 md:border-transparent mb-6">
+                    <p className="text-sm md:text-base text-[#D4AF37] font-semibold uppercase tracking-[0.2em]">
+                      Proprietor, {brand.name}
+                    </p>
+                  </div>
+   
+                  <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg max-w-3xl">
+                    {proprietor.bio}
+                  </p>
+                </div>
               </div>
- 
-              <h3 className="font-[family-name:var(--font-outfit)] text-2xl sm:text-3xl font-light text-[var(--foreground)] mb-2">
-                {proprietor.name}
-              </h3>
- 
-              <p className="text-sm text-[#D4AF37] font-medium mb-6">
-                Proprietor, {brand.name}
-              </p>
- 
-              <p className="text-[var(--theme-text-muted)] leading-relaxed max-w-2xl mx-auto">
-                {proprietor.bio}
-              </p>
             </div>
           </FadeInSection>
         </div>

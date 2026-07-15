@@ -179,11 +179,12 @@ export default function ContactPage() {
 
             {/* Right: Contact Form */}
             <FadeInSection delay={0.15}>
-              <div className="glass rounded-2xl p-8 md:p-10 h-fit">
-                <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-white mb-2">
+              <div className="glass rounded-2xl p-8 md:p-10 h-fit bg-gradient-to-br from-[#D4AF37]/15 via-[#D4AF37]/5 to-transparent border border-[#D4AF37]/30 shadow-[0_0_30px_rgba(212,175,55,0.1)] relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-60"></div>
+                <h2 className="font-[family-name:var(--font-outfit)] text-xl font-light text-[var(--foreground)] mb-2 relative z-10">
                   Send Us a Message
                 </h2>
-                <p className="text-sm text-slate-500 mb-8">
+                <p className="text-sm text-[var(--theme-text-muted)] mb-8">
                   Fill in the details below and we will get back to you.
                 </p>
 
@@ -193,54 +194,54 @@ export default function ContactPage() {
                 >
                   {/* Name */}
                   <div>
-                    <label className="block text-sm text-[#A3B5D9] mb-1.5">
+                    <label className="block text-sm text-[var(--theme-text-muted)] mb-1.5 font-medium">
                       Full Name
                     </label>
                     <input
                       type="text"
                       placeholder="Enter your name"
-                      className="w-full px-4 py-3 rounded-xl bg-[#0B1736] border border-[#D4AF37]/20 text-white placeholder:text-[#8B9ECC] text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D9791A] transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-transparent border border-[#D4AF37]/30 text-[var(--foreground)] placeholder:text-[var(--foreground)]/40 text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-sm text-[#A3B5D9] mb-1.5">
+                    <label className="block text-sm text-[var(--theme-text-muted)] mb-1.5 font-medium">
                       Email Address
                     </label>
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full px-4 py-3 rounded-xl bg-[#0B1736] border border-[#D4AF37]/20 text-white placeholder:text-[#8B9ECC] text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D9791A] transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-transparent border border-[#D4AF37]/30 text-[var(--foreground)] placeholder:text-[var(--foreground)]/40 text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                     />
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="block text-sm text-[#A3B5D9] mb-1.5">
+                    <label className="block text-sm text-[var(--theme-text-muted)] mb-1.5 font-medium">
                       Phone Number
                     </label>
                     <input
                       type="tel"
                       placeholder="Enter your phone number"
-                      className="w-full px-4 py-3 rounded-xl bg-[#0B1736] border border-[#D4AF37]/20 text-white placeholder:text-[#8B9ECC] text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D9791A] transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-transparent border border-[#D4AF37]/30 text-[var(--foreground)] placeholder:text-[var(--foreground)]/40 text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all"
                     />
                   </div>
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm text-[#A3B5D9] mb-1.5">
+                    <label className="block text-sm text-[var(--theme-text-muted)] mb-1.5 font-medium">
                       Message
                     </label>
                     <textarea
                       rows={4}
                       placeholder="How can we help you?"
-                      className="w-full px-4 py-3 rounded-xl bg-[#0B1736] border border-[#D4AF37]/20 text-white placeholder:text-[#8B9ECC] text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D9791A] transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-transparent border border-[#D4AF37]/30 text-[var(--foreground)] placeholder:text-[var(--foreground)]/40 text-sm focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all resize-none"
                     />
                   </div>
 
                   {/* Submit */}
-                  <button type="submit" className="btn-primary w-full text-sm">
+                  <button type="submit" className="btn-primary w-full text-sm font-semibold !text-[#0B1736]">
                     Send Message
                   </button>
                 </form>

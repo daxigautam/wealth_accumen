@@ -254,17 +254,6 @@ export function Navbar() {
             {/* Right Side: Theme Toggle and Login */}
             <div className="hidden lg:flex items-center gap-3 z-10">
               
-              {/* Theme Toggle Button */}
-              {mounted && (
-                <button
-                  onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-                  className="p-2.5 rounded-full bg-[var(--secondary-bg)] border border-[var(--secondary-border)] text-[var(--foreground)] hover:text-[#D4AF37] transition-colors shadow-sm"
-                  aria-label="Toggle Theme"
-                >
-                  {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-                </button>
-              )}
-
               {/* Login Button */}
               <div
                 className="relative"
@@ -337,18 +326,6 @@ export function Navbar() {
             >
               <div className="p-6 pt-20 space-y-2 relative">
                 
-                {/* Mobile Theme Toggle */}
-                {mounted && (
-                  <div className="absolute top-6 right-6">
-                    <button
-                      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-                      className="p-2 rounded-full bg-[var(--secondary-bg)] border border-[var(--secondary-border)] text-[var(--foreground)] hover:text-[#D4AF37] transition-colors"
-                    >
-                      {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
-                  </div>
-                )}
-
                 {navLinks.map((link) => (
                   <div key={link.label}>
                     <Link

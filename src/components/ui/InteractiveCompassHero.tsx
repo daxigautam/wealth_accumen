@@ -56,18 +56,13 @@ export function InteractiveCompassHero() {
     visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } }
   };
 
-  const isDark = !mounted || resolvedTheme === "dark";
-  const gridColor = isDark ? "rgba(255,255,255,1)" : "rgba(4,15,45,1)";
+
 
   return (
     <section 
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[var(--background)] pt-24 pb-20 transition-colors duration-500"
     >
-      {/* Subtle Blueprint Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.05] z-0 pointer-events-none transition-opacity duration-500" style={{
-          backgroundImage: `linear-gradient(${gridColor} 1px, transparent 1px), linear-gradient(90deg, ${gridColor} 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-      }} />
+
 
       {/* Dust Particles */}
       <motion.div 
