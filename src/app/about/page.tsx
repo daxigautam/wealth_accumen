@@ -330,7 +330,7 @@ export default function AboutPage() {
               
               <div className="flex flex-col md:flex-row items-center md:items-center lg:items-start gap-8 lg:gap-14">
                 {/* Avatar */}
-                <div className="flex-shrink-0 relative w-40 h-40 sm:w-48 sm:h-48 lg:w-[260px] lg:h-[260px] rounded-full border-[4px] border-[#D4AF37] shadow-[0_15px_35px_rgba(212,175,55,0.4)] overflow-hidden mx-auto md:mx-0 mt-2">
+                <div className="flex-shrink-0 relative w-40 h-40 sm:w-48 sm:h-48 lg:w-[260px] lg:h-[260px] rounded-full border-[4px] border-[#D4AF37] shadow-[0_15px_35px_rgba(212,175,55,0.4)] overflow-hidden mx-auto md:mx-0 md:-ml-4 lg:-ml-8 mt-2">
                   <Image 
                     src="/assets/images/atharv_wadekar.jpeg"
                     alt="Atharva Wadekar"

@@ -237,8 +237,8 @@ export function InteractiveCompassHero() {
                         : node.angle === 180 
                           ? 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-1/2 lg:-translate-x-1/2 lg:-bottom-12 lg:whitespace-nowrap' 
                           : node.angle > 0 && node.angle < 180 
-                            ? 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-auto lg:translate-x-0 lg:-right-28 lg:text-left lg:whitespace-nowrap' 
-                            : 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-auto lg:translate-x-0 lg:-left-28 lg:text-right lg:whitespace-nowrap'
+                            ? 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:left-full lg:translate-x-0 lg:ml-6 lg:text-left lg:whitespace-nowrap' 
+                            : 'top-full mt-2 left-1/2 -translate-x-1/2 text-center w-24 whitespace-normal lg:top-auto lg:mt-0 lg:right-full lg:left-auto lg:translate-x-0 lg:mr-6 lg:text-right lg:whitespace-nowrap'
                       }
                       ${isHighlighted ? 'text-[#D4AF37] scale-110 drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]' : 'text-[var(--theme-text-muted)]'}
                     `}

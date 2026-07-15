@@ -102,7 +102,7 @@ export function WealthJourneyTimeline() {
               
               {/* Vertical Glowing Animated Line */}
               <motion.div 
-                className="absolute top-4 left-[23px] sm:left-[27px] w-1 bg-gradient-to-b from-white via-white/80 to-white bg-[length:200%_auto] animate-gradient-y shadow-[0_0_15px_rgba(255,255,255,0.7)] rounded-full z-0"
+                className="absolute top-4 left-[23px] sm:left-[27px] w-1 bg-gradient-to-b from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] bg-[length:200%_auto] animate-gradient-y shadow-[0_0_15px_rgba(212,175,55,0.4)] rounded-full z-0"
                 initial={{ height: "0%" }}
                 animate={{ height: `calc(${(activeStep / (journeySteps.length - 1)) * 100}% - 2rem)` }}
                 transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -121,7 +121,7 @@ export function WealthJourneyTimeline() {
                     {/* Icon Circle */}
                     <motion.div 
                       className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shrink-0 border-2 transition-all duration-700
-                        ${isActive ? 'bg-white border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.4)]' : 'bg-[var(--background)] border-[var(--foreground)]/10 hover:border-[var(--foreground)]/20'}
+                        ${isActive ? 'bg-white border-[#D4AF37]' : 'bg-[var(--background)] border-[var(--foreground)]/10 hover:border-[var(--foreground)]/20'}
                         ${isCurrent ? 'scale-110' : 'scale-100'}
                       `}
                     >
