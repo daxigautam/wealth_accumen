@@ -335,7 +335,7 @@ export default function AboutPage() {
                     src="/assets/images/atharv_wadekar.jpeg"
                     alt="Atharva Wadekar"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[75%_center]"
                   />
                 </div>
    
