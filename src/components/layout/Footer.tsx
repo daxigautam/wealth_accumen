@@ -10,12 +10,12 @@ export function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
       <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-4">
           
           {/* Brand Column */}
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-3 mb-6">
+            <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
                 src={brand.logo}
                 alt="Wealth Acumen"
@@ -27,12 +27,12 @@ export function Footer() {
                 {brand.name}
               </span>
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed mb-8 max-w-sm font-light">
+            <p className="text-sm text-white/60 leading-relaxed mb-4 max-w-sm font-light">
               Elevating your wealth journey with personalized strategies, trusted insights, and steady, long-term growth.
             </p>
             
             {/* Social Links */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center gap-4 mb-4">
               <a
                 href={brand.instagram}
                 target="_blank"
@@ -63,10 +63,10 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-6 uppercase tracking-wider text-xs">
+            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-4 uppercase tracking-wider text-xs">
               Quick Links
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
@@ -90,10 +90,10 @@ export function Footer() {
 
           {/* Services */}
           <div className="lg:col-span-3">
-            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-6 uppercase tracking-wider text-xs">
+            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-4 uppercase tracking-wider text-xs">
               Our Services
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {[
                 { label: "Equity", href: "/services/equity" },
                 { label: "Mutual Funds", href: "/services/mutual-funds" },
@@ -117,10 +117,10 @@ export function Footer() {
 
           {/* Contact & Legal */}
           <div className="lg:col-span-3">
-            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-6 uppercase tracking-wider text-xs">
+            <h3 className="font-[family-name:var(--font-outfit)] font-light text-white mb-4 uppercase tracking-wider text-xs">
               Contact
             </h3>
-            <ul className="space-y-4 text-sm text-white/60 font-light">
+            <ul className="space-y-2 text-sm text-white/60 font-light">
               <li className="flex items-start gap-3 group">
                 <svg className="w-5 h-5 mt-0.5 text-[#D4AF37] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -146,7 +146,7 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-8 pt-6 border-t border-white/10 flex gap-4">
+            <div className="mt-6 pt-4 border-t border-white/10 flex gap-4">
               {[
                 { label: "Disclaimer", href: "/disclaimer" },
                 { label: "Disclosure", href: "/disclosure" },
@@ -164,14 +164,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-6 pt-4 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
               <p className="text-xs text-white/40 font-light">
                 AMFI REGISTERED MUTUAL FUND DISTRIBUTOR &bull; AMFI Registration
                 No. <strong className="text-white/70">{brand.amfiRegNo}</strong> &bull; EUIN No. <strong className="text-white/70">{brand.euinNo}</strong>
               </p>
-              <p className="text-xs text-white/40 font-light mt-2">
+              <p className="text-xs text-white/40 font-light mt-1">
                 Developed and maintained by <a href="https://bizleap.in/" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline font-medium">BIZLEAP</a>
               </p>
             </div>

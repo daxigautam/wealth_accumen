@@ -67,12 +67,12 @@ export const kycPortals = {
     },
   ],
   downloads: [
-    { name: "KYC Non-Individual", file: "/forms/CAMSKRA_Non_Individual.pdf" },
-    { name: "KYC Individual", file: "/forms/Individual_KYC.pdf" },
+    { name: "KYC Non-Individual", file: "https://wealthacumen.in/wp-content/uploads/2025/05/CAMSKRA_Non_Individual.pdf" },
+    { name: "KYC Individual", file: "https://wealthacumen.in/wp-content/uploads/2025/05/Individual_KYC.pdf" },
     {
       name: "FATCA Non-Individual",
-      file: "/forms/CAMS_FATCA_Non_Individual.pdf",
+      file: "https://wealthacumen.in/wp-content/uploads/2025/05/CAMS_FATCA_Non_Individual.pdf",
     },
-    { name: "FATCA Individual", file: "/forms/CAMS_FATCA-Individuals.pdf" },
+    { name: "FATCA Individual", file: "https://wealthacumen.in/wp-content/uploads/2025/05/CAMS_FATCA-Individuals.pdf" },
   ],
 } as const;

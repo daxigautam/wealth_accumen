@@ -214,11 +214,6 @@ export default function AboutPage() {
                       Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic font-medium pr-2 pb-1">Mission</span>
                     </h2>
                     <div className="flex items-start gap-4">
-                      <div className="hidden sm:flex w-12 h-12 rounded-xl bg-[#D4AF37]/10 items-center justify-center flex-shrink-0 mt-1">
-                        <svg className="w-6 h-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>
-                      </div>
                       <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg">
                         {aboutContent.missionFull}
                       </p>

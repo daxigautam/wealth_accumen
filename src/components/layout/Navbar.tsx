@@ -138,9 +138,9 @@ export function Navbar() {
         className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
           showAnnouncement ? "top-10" : "top-0"
         } ${
-          scrolled
-            ? "glass-nav shadow-lg"
-            : "bg-transparent border-b border-transparent"
+          pathname === "/" && !scrolled
+            ? "bg-transparent border-b border-transparent"
+            : "glass-nav shadow-lg"
         }`}
       >
         <div className="max-w-none mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 relative">
@@ -174,7 +174,13 @@ export function Navbar() {
             </Link>
 
             {/* Center: Desktop Nav Links */}
-            <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center backdrop-blur-md border shadow-sm rounded-full px-3 lg:px-5 h-[52px] transition-all duration-500 bg-white/30 dark:bg-black/30 border-white/40 dark:border-white/10 gap-1 lg:gap-2">
+            <div 
+              className={`hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center rounded-full px-3 lg:px-5 h-[52px] transition-all duration-500 gap-1 lg:gap-2 ${
+                pathname === "/" && !scrolled 
+                  ? "bg-transparent border-transparent"
+                  : "backdrop-blur-md border shadow-sm bg-white/30 dark:bg-black/30 border-white/40 dark:border-white/10"
+              }`}
+            >
               {navLinks.map((link) => {
                 const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
                 return (
