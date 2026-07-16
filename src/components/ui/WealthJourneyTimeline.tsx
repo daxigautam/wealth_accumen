@@ -60,9 +60,6 @@ export function WealthJourneyTimeline() {
       </div>
 
       <div className="bg-[var(--glass-bg)] backdrop-blur-2xl border border-[var(--glass-border)] rounded-[2.5rem] p-6 sm:p-8 lg:p-10 shadow-[0_30px_60px_rgba(4,15,45,0.1)] relative overflow-hidden group transition-colors duration-500">
-        {/* Glow effect */}
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[120px] rounded-full pointer-events-none transition-all duration-1000 group-hover:bg-[#D4AF37]/20" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#D4AF37]/5 blur-[100px] rounded-full pointer-events-none" />
         
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-center">
           
@@ -102,7 +99,7 @@ export function WealthJourneyTimeline() {
               
               {/* Vertical Glowing Animated Line */}
               <motion.div 
-                className="absolute top-4 left-[23px] sm:left-[27px] w-1 bg-gradient-to-b from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] bg-[length:200%_auto] animate-gradient-y shadow-[0_0_15px_rgba(212,175,55,0.4)] rounded-full z-0"
+                className="absolute top-4 left-[23px] sm:left-[27px] w-1 bg-gradient-to-b from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] bg-[length:200%_auto] animate-gradient-y rounded-full z-0"
                 initial={{ height: "0%" }}
                 animate={{ height: `calc(${(activeStep / (journeySteps.length - 1)) * 100}% - 2rem)` }}
                 transition={{ duration: 0.8, ease: "easeInOut" }}

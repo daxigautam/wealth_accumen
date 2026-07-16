@@ -23,21 +23,21 @@ function InteractiveBar({ index, total, mouseXProgress }: { index: number, total
     return baseHeight + (peakHeight - baseHeight) * Math.pow(wave, 1.5); // Pow makes the peak slightly sharper
   });
 
-  // Color intensity based on height/wave
-  const opacity = useTransform(mouseXProgress, (val: number) => {
+  // Glow intensity based on height/wave
+  const glowIntensity = useTransform(mouseXProgress, (val: number) => {
     const distance = Math.abs(val - barPosition);
-    if (distance > 0.25) return 0.25; // Dimmer when not near mouse
+    if (distance > 0.25) return 0; // No glow when not near mouse
     const wave = Math.cos((distance / 0.25) * (Math.PI / 2));
-    return 0.25 + (0.75 * wave); // Brightens to 1.0 at peak
+    return wave; // Peak glow at 1.0
   });
 
   return (
     <motion.div 
-      className="flex-1 mx-[2px] sm:mx-[4px] md:mx-1.5 bg-gradient-to-t from-[var(--foreground)]/70 to-[var(--foreground)] rounded-t-sm origin-bottom transition-colors duration-300"
+      className="flex-1 mx-[2px] sm:mx-[4px] md:mx-1.5 bg-[#1A365D] rounded-t-sm origin-bottom transition-colors duration-300"
       style={{ 
         height: useTransform(heightPercent, v => `${v}%`),
-        opacity: opacity,
-        boxShadow: useTransform(opacity, o => `0 0 ${o * 20}px rgba(4,15,45,${o * 0.5})`)
+        opacity: 1, // Solid bars, no fog effect
+        boxShadow: useTransform(glowIntensity, o => `0 0 ${o * 20}px rgba(4,15,45,${o * 0.4})`)
       }}
     />
   );
@@ -101,7 +101,7 @@ export function MouseGrowthHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-sans tracking-tight text-5xl sm:text-6xl md:text-7xl font-light text-[var(--foreground)] mb-6 pointer-events-none select-none"
+          className="font-sans tracking-tight text-5xl sm:text-6xl md:text-7xl font-light text-[#D4AF37] mb-6 pointer-events-none select-none"
         >
           Chart Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] bg-[length:200%_auto] animate-gradient-x">Growth</span>
         </motion.h1>

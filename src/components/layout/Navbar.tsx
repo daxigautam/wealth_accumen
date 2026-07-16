@@ -12,16 +12,6 @@ import { brand } from "@/config/brand";
 const navLinks = [
   { label: "Home", href: "/" },
   {
-    label: "About Us",
-    href: "/about",
-    children: [
-      { label: "About Us", href: "/about" },
-      { label: "Proprietor", href: "/about#proprietor" },
-      { label: "FAQs", href: "/faq" },
-      { label: "DIY (Do It Yourself)", href: "/diy" },
-    ],
-  },
-  {
     label: "Services",
     href: "/services",
     children: [
@@ -31,6 +21,16 @@ const navLinks = [
       { label: "ETFs", href: "/services/etfs" },
       { label: "Bonds", href: "/services/bonds" },
       { label: "Fixed Deposit", href: "/services/fixed-deposit" },
+    ],
+  },
+  {
+    label: "About Us",
+    href: "/about",
+    children: [
+      { label: "About Us", href: "/about" },
+      { label: "Proprietor", href: "/about#proprietor" },
+      { label: "FAQs", href: "/faq" },
+      { label: "DIY (Do It Yourself)", href: "/diy" },
     ],
   },
   {
@@ -251,55 +251,8 @@ export function Navbar() {
               })}
             </div>
 
-            {/* Right Side: Theme Toggle and Login */}
-            <div className="hidden lg:flex items-center gap-3 z-10">
-              
-              {/* Login Button */}
-              <div
-                className="relative"
-                onMouseEnter={() => setActiveDropdown("login")}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <button className={`px-5 h-[44px] text-sm font-light transition-colors rounded-full flex items-center gap-1.5 shadow-sm backdrop-blur-md text-[#040F2D] bg-gradient-to-r from-[#D4AF37] to-[#C59B27] hover:shadow-md border-transparent`}>
-                  Login
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform ${
-                      activeDropdown === "login" ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                <AnimatePresence>
-                  {activeDropdown === "login" && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-1 w-56 py-2 rounded-xl bg-[var(--background)] border border-[var(--glass-border)] shadow-lg"
-                    >
-                      {loginLinks.map((item) => (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block px-4 py-2.5 text-sm font-medium text-[var(--theme-text-muted)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-                        >
-                          {item.label}
-                        </a>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-            </div>
+            {/* Right Side: empty spacer for balance */}
+              <div className="hidden lg:flex items-center gap-3 z-10" />
           </div>
         </div>
       </nav>
@@ -361,24 +314,6 @@ export function Navbar() {
                     )}
                   </div>
                 ))}
-
-                <div className="pt-4 border-t border-[var(--glass-border)] space-y-2">
-                  <p className="px-4 text-xs font-medium text-[var(--theme-text-muted)] uppercase tracking-wider">
-                    Login / Register
-                  </p>
-                  {loginLinks.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block px-4 py-2.5 text-sm text-[var(--foreground)] hover:text-[#D4AF37] hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
 
                 <div className="pt-4">
                   <a

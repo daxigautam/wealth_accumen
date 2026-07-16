@@ -317,7 +317,7 @@ export default function HomePage() {
             
             {/* 1. Equity */}
             <FadeIn delay={0.1} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/equity" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/equity" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
@@ -333,7 +333,7 @@ export default function HomePage() {
 
             {/* 2. Mutual Funds */}
             <FadeIn delay={0.2} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/mutual-funds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/mutual-funds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-sm">
@@ -349,7 +349,7 @@ export default function HomePage() {
 
             {/* 3. ETFs */}
             <FadeIn delay={0.3} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/etfs" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/etfs" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
@@ -365,7 +365,7 @@ export default function HomePage() {
 
             {/* 4. Insurance */}
             <FadeIn delay={0.4} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/insurance" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/insurance" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-sm">
@@ -381,7 +381,7 @@ export default function HomePage() {
             
             {/* 5. Bonds */}
             <FadeIn delay={0.5} className="w-[85vw] sm:w-[380px] lg:w-[420px] shrink-0 snap-center h-[320px] sm:h-[340px]">
-              <Link href="/services/bonds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-white backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
+              <Link href="/services/bonds" className="group block relative w-full h-full rounded-3xl overflow-hidden bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-all duration-500 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/70 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="p-6 sm:p-8 h-full flex flex-col justify-between relative z-10">
                   <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#040F2D]/5 border border-[#D4AF37]/20 flex items-center justify-center text-[#040F2D] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-sm">
@@ -440,7 +440,7 @@ export default function HomePage() {
             {/* Downloads Card */}
             <FadeIn delay={0.2}>
               <div className="group relative bg-[var(--secondary-bg)] backdrop-blur-md backdrop-blur-md rounded-[2rem] p-8 sm:p-12 border-2 border-[#D4AF37]/30 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden h-full flex flex-col justify-between">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#040F2D]/30 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#B58A18]/30 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="relative z-10">
                   <div className="w-16 h-16 rounded-2xl bg-white border border-white/20 flex items-center justify-center text-[#040F2D] mb-8 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(255,255,255,0.15)]">
                     <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
