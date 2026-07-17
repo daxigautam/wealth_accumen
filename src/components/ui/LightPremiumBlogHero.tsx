@@ -112,7 +112,7 @@ export function LightPremiumBlogHero() {
               <Link 
                 href={brand.whatsapp}
                 target="_blank"
-                className="group relative overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#8B6914] text-[#040F2D] font-light py-4 px-10 rounded-full shadow-[0_10px_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(212,175,55,0.4)] flex items-center justify-center w-full sm:w-auto text-lg"
+                className="group relative overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#8B6914] text-[#0B245B] font-light py-4 px-10 rounded-full shadow-[0_10px_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_15px_40px_rgba(212,175,55,0.4)] flex items-center justify-center w-full sm:w-auto text-lg"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   Book Consultation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

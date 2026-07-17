@@ -37,14 +37,14 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
       {/* Navigation Buttons */}
       <button 
         onClick={handlePrev}
-        className="absolute left-0 sm:-left-4 md:-left-12 z-40 w-12 h-12 rounded-full bg-[#0B1736]/80 border border-[#D4AF37]/50 text-[#D4AF37] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#040F2D] transition-colors shadow-[0_0_15px_rgba(4,15,45,0.5)]"
+        className="absolute left-0 sm:-left-4 md:-left-12 z-40 w-12 h-12 rounded-full bg-[#0B1736]/80 border border-[#D4AF37]/50 text-[#D4AF37] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#0B245B] transition-colors shadow-[0_0_15px_rgba(4,15,45,0.5)]"
       >
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
       </button>
       
       <button 
         onClick={handleNext}
-        className="absolute right-0 sm:-right-4 md:-right-12 z-40 w-12 h-12 rounded-full bg-[#0B1736]/80 border border-[#D4AF37]/50 text-[#D4AF37] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#040F2D] transition-colors shadow-[0_0_15px_rgba(4,15,45,0.5)]"
+        className="absolute right-0 sm:-right-4 md:-right-12 z-40 w-12 h-12 rounded-full bg-[#0B1736]/80 border border-[#D4AF37]/50 text-[#D4AF37] flex items-center justify-center hover:bg-[#D4AF37] hover:text-[#0B245B] transition-colors shadow-[0_0_15px_rgba(4,15,45,0.5)]"
       >
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
       </button>
@@ -87,7 +87,7 @@ export function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) 
                 className={`absolute w-[300px] sm:w-[420px] lg:w-[520px] cursor-pointer transform-style-3d`}
                 onClick={() => setActiveIndex(index)}
               >
-                <div className={`bg-[#040F2D] backdrop-blur-xl border ${isCenter ? 'border-[#D4AF37]' : 'border-[#D4AF37]/20'} rounded-3xl p-8 shadow-[0_20px_50px_rgba(4,15,45,0.4)] h-full min-h-[320px] flex flex-col justify-between transition-colors duration-500`}>
+                <div className={`bg-[#0B245B] backdrop-blur-xl border ${isCenter ? 'border-[#D4AF37]' : 'border-[#D4AF37]/20'} rounded-3xl p-8 shadow-[0_20px_50px_rgba(4,15,45,0.4)] h-full min-h-[320px] flex flex-col justify-between transition-colors duration-500`}>
                   <div>
                     {/* Stars */}
                     <div className="flex gap-1 mb-6">

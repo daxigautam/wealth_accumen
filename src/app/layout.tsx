@@ -77,7 +77,7 @@ export default function RootLayout({
       className={`${inter.variable} ${outfit.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable} ${playfair.variable} antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col noise-overlay transition-colors duration-300">
+      <body className="min-h-screen flex flex-col noise-overlay transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

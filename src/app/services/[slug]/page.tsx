@@ -28,6 +28,7 @@ export default async function ServicePage({
 }) {
   const { slug } = await params;
   const service = services.find((s) => s.slug === slug);
+  console.log("Looking for slug:", slug, "Available slugs:", services.map(s => s.slug));
 
   if (!service) {
     notFound();

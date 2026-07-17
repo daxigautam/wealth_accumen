@@ -65,7 +65,7 @@ export default function DIYPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg text-[#040F2D] max-w-2xl mx-auto leading-relaxed"
+            className="text-lg text-[#0B245B] max-w-2xl mx-auto leading-relaxed"
           >
             Start investing on your own terms with the tools and support you need.
           </motion.p>
@@ -86,7 +86,7 @@ export default function DIYPage() {
                 </svg>
               </div>
 
-              <p className="text-[#040F2D] leading-relaxed text-base sm:text-lg text-center mb-10">
+              <p className="text-[#0B245B] leading-relaxed text-base sm:text-lg text-center mb-10">
                 {diyContent.description}
               </p>
 
@@ -103,7 +103,7 @@ export default function DIYPage() {
                   </svg>
                   Download Angel One App
                 </a>
-                <p className="text-xs text-[#040F2D] mt-4">
+                <p className="text-xs text-[#0B245B] mt-4">
                   Your one-stop platform for stocks, mutual funds, ETFs, IPOs, and more.
                 </p>
               </div>

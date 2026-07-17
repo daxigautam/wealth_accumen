@@ -9,7 +9,7 @@
   --font-serif: var(--font-playfair), Georgia, serif;
 
   /* Premium Dark Blue & Golden Theme Color System */
-  --color-obsidian: #040F2D;
+  --color-obsidian: #0B245B;
   --color-obsidian-light: #0B1736;
   --color-obsidian-surface: #101E42;
 
@@ -35,7 +35,7 @@
   --color-orange-gradient-end: #C59B27;
   --color-hairline: #1E2D56;
   
-  --color-slate-100: #040F2D;
+  --color-slate-100: #0B245B;
   --color-slate-300: #0B1736;
   --color-slate-400: #101E42;
   --color-slate-500: #1E2D56;
@@ -71,7 +71,7 @@
 
 :root { 
   --background: #F9F4E6; 
-  --foreground: #040F2D; 
+  --foreground: #0B245B; 
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(4, 15, 45, 0.1);
   --glass-hover-bg: rgba(255, 255, 255, 0.9);
@@ -85,7 +85,7 @@
 }
 
 .dark {
-  --background: #040F2D; 
+  --background: #0B245B; 
   --foreground: #F8FAFC; 
   --glass-bg: rgba(11, 23, 54, 0.6);
   --glass-border: rgba(212, 175, 55, 0.15);
@@ -171,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ═══ BUTTONS ═══ */
 .btn-primary {
   background: linear-gradient(135deg, #D4AF37 0%, #C59B27 100%);
-  color: #040F2D; font-weight: 700; padding: 0.875rem 2.25rem; border-radius: 0.875rem;
+  color: #0B245B; font-weight: 700; padding: 0.875rem 2.25rem; border-radius: 0.875rem;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 14px -3px rgba(212, 175, 55, 0.35);
   position: relative; overflow: hidden;

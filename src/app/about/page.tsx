@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import { AnimatedSentenceHero } from "@/components/ui/AnimatedSentenceHero";
+import { EmpaneledAMCCarousel } from "@/components/ui/EmpaneledAMCCarousel";
 import { brand } from "@/config/brand";
 import { aboutContent, proprietor, whyChooseUs } from "@/config/content";
 
@@ -97,67 +99,20 @@ export default function AboutPage() {
             {/* Left Content Column (55% width) */}
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 lg:max-w-[560px]">
               <span className="text-xs font-light text-[var(--foreground)] tracking-[0.2em] uppercase leading-none">
-                Who We Are
+                ABOUT
               </span>
               
               <h1 className="font-[family-name:var(--font-serif)] text-5xl sm:text-6xl lg:text-[3.75rem] font-light text-[var(--foreground)] leading-[1.1] tracking-tight">
-                <span className="text-[var(--foreground)]">Wealth Acumen</span>
+                <span className="text-[var(--foreground)]">Wealth <span className="text-[#D4AF37]">Acumen</span></span>
               </h1>
 
               <div className="space-y-4 text-base text-[var(--theme-text-muted)] leading-relaxed font-normal">
-                <p className="text-xl sm:text-2xl font-light text-[var(--foreground)] leading-snug">
-                  Guiding your financial journey with trust, clarity and purpose.
+                <p className="text-xl sm:text-2xl font-[family-name:var(--font-outfit)] font-light text-[#D4AF37] leading-snug">
+                  Above all, we believe that real change is possible and that tomorrow doesn't have to be like today.
                 </p>
                 <p className="text-base sm:text-[1.1rem] leading-relaxed text-[var(--theme-text-muted)]">
-                  At Wealth Acumen, we believe that smart investing begins with the right guidance. As a trusted partner in your financial journey, we help you make informed decisions, achieve your goals and build long-term wealth for a secure future.
+                  We believe that smart investing begins with clarity and confidence. As a trusted provider of investment and financial solutions, we are committed to guiding individuals and families toward long-term wealth creation.
                 </p>
-              </div>
-
-              {/* Trust Pillars - Minimal & Luxurious Typographic Layout */}
-              <div className="grid grid-cols-2 gap-5 sm:gap-6 w-full pt-8 border-t border-[#D4AF37]/20 mt-8">
-                {/* Pillar 1 */}
-                <div className="flex flex-col space-y-2 p-5 rounded-2xl glass glass-hover">
-                  <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">01</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-[15px] font-semibold text-[var(--foreground)]">
-                    Client First
-                  </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
-                    Your goals are our priority. We put your interests first.
-                  </p>
-                </div>
-                
-                {/* Pillar 2 */}
-                <div className="flex flex-col space-y-2 p-5 rounded-2xl glass glass-hover">
-                  <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">02</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-[15px] font-semibold text-[var(--foreground)]">
-                    Transparent Advice
-                  </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
-                    Honest, unbiased and clear guidance you can always rely on.
-                  </p>
-                </div>
-                
-                {/* Pillar 3 */}
-                <div className="flex flex-col space-y-2 p-5 rounded-2xl glass glass-hover">
-                  <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">03</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-[15px] font-semibold text-[var(--foreground)]">
-                    Goal Based Approach
-                  </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
-                    Personalized strategies designed around your dreams and needs.
-                  </p>
-                </div>
-                
-                {/* Pillar 4 */}
-                <div className="flex flex-col space-y-2 p-5 rounded-2xl glass glass-hover">
-                  <span className="font-[family-name:var(--font-serif)] text-2xl font-light text-[#D4AF37] leading-none">04</span>
-                  <h3 className="font-[family-name:var(--font-outfit)] text-[15px] font-semibold text-[var(--foreground)]">
-                    Long Term Growth
-                  </h3>
-                  <p className="text-xs text-[var(--theme-text-muted)] leading-relaxed">
-                    Focused on creating sustainable wealth and financial independence.
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -178,11 +133,213 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══ OUR MISSION ═══ */}
-      <section className="pt-20 pb-10 sm:pt-24 sm:pb-12 bg-gradient-to-b from-transparent via-[#D9791A]/[0.015] to-transparent">
+      {/* ═══ WE BRING THE BEST ═══ */}
+      <section className="pt-10 pb-12 sm:pt-16 sm:pb-16 bg-[var(--background)] transition-colors duration-500">
+        <div className="max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-8 xl:px-4 w-full">
+          <FadeInSection>
+            <div className="mb-16 text-center flex flex-col items-center">
+              <span className="text-xs font-bold text-[var(--theme-text-muted)] tracking-[0.2em] uppercase leading-none mb-4 block">
+                Why Us
+              </span>
+              <h2 className="font-[family-name:var(--font-outfair)] font-light text-4xl sm:text-5xl lg:text-[3.25rem] text-[#0B245B] dark:text-white leading-[1.2] tracking-tight max-w-2xl mx-auto">
+                We bring the best things <br /> <span className="text-[#D4AF37] italic">For you</span>
+              </h2>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-x-12 gap-y-16">
+            {/* Item 1 */}
+            <FadeInSection delay={0.1} className="lg:col-span-2">
+              <div className="flex flex-col items-start text-left bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded-[2rem] p-8 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2 transition-all duration-500 h-full relative group overflow-hidden">
+                <div className="absolute top-0 right-0 w-56 h-56 bg-gradient-to-bl from-[#B58A18]/50 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 w-20 h-20 mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Image
+                    src="/assets/images/image-box-25.jpg"
+                    alt="Personalized Strategies"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-light text-[#0B245B] dark:text-white mb-3">
+                  Personalized Strategies
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  We don&apos;t believe in one-size-fits-all. Your goals, risk appetite, and time horizon shape your investment plan.
+                </p>
+              </div>
+            </FadeInSection>
+
+            {/* Item 2 */}
+            <FadeInSection delay={0.2} className="lg:col-span-2">
+              <div className="flex flex-col items-start text-left bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded-[2rem] p-8 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2 transition-all duration-500 h-full relative group overflow-hidden">
+                <div className="absolute top-0 right-0 w-56 h-56 bg-gradient-to-bl from-[#B58A18]/50 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 w-20 h-20 mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Image
+                    src="/assets/images/image-box-26.jpg"
+                    alt="Goal-Oriented & Disciplined Investing"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-light text-[#0B245B] dark:text-white mb-3">
+                  Goal-Oriented & Disciplined Investing
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  We focus on long-term wealth creation through disciplined, systematic investment approaches designed to generate consistent returns.
+                </p>
+              </div>
+            </FadeInSection>
+
+            {/* Item 3 */}
+            <FadeInSection delay={0.3} className="lg:col-span-2">
+              <div className="flex flex-col items-start text-left bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded-[2rem] p-8 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2 transition-all duration-500 h-full relative group overflow-hidden">
+                <div className="absolute top-0 right-0 w-56 h-56 bg-gradient-to-bl from-[#B58A18]/50 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 w-20 h-20 mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Image
+                    src="/assets/images/image-box-27.jpg"
+                    alt="Education-First Approach"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-light text-[#0B245B] dark:text-white mb-3">
+                  Education-First Approach
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  We empower our clients with financial literacy—because an informed investor is a confident investor.
+                </p>
+              </div>
+            </FadeInSection>
+
+            {/* Item 4 */}
+            <FadeInSection delay={0.4} className="lg:col-span-2 lg:col-start-2">
+              <div className="flex flex-col items-start text-left bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded-[2rem] p-8 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2 transition-all duration-500 h-full relative group overflow-hidden">
+                <div className="absolute top-0 right-0 w-56 h-56 bg-gradient-to-bl from-[#B58A18]/50 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 w-20 h-20 mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Image
+                    src="/assets/images/image-box-28.jpg"
+                    alt="Ethical & Transparent Advisory"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-light text-[#0B245B] dark:text-white mb-3">
+                  Ethical & Transparent Advisory
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  Trust is the foundation of our relationship. No hidden charges, no misleading promises—just honest, transparent guidance.
+                </p>
+              </div>
+            </FadeInSection>
+
+            {/* Item 5 */}
+            <FadeInSection delay={0.5} className="lg:col-span-2">
+              <div className="flex flex-col items-start text-left bg-[var(--secondary-bg)] backdrop-blur-md border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 rounded-[2rem] p-8 shadow-lg hover:shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:-translate-y-2 transition-all duration-500 h-full relative group overflow-hidden">
+                <div className="absolute top-0 right-0 w-56 h-56 bg-gradient-to-bl from-[#B58A18]/50 to-transparent rounded-bl-[100%] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="relative z-10 w-20 h-20 mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <Image
+                    src="/assets/images/image-box-29.jpg"
+                    alt="Continuous Support & Guidance"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-[family-name:var(--font-playfair)] text-2xl font-light text-[#0B245B] dark:text-white mb-3">
+                  Continuous Support & Guidance
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  From onboarding to portfolio reviews—we&apos;re always available to support your investment journey, every step of the way.
+                </p>
+              </div>
+            </FadeInSection>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ═══ PROPRIETOR ═══ */}
+      <section
+        id="proprietor"
+        className="pt-10 pb-20 sm:pt-12 sm:pb-24 bg-gradient-to-b from-transparent via-cyan-500/[0.02] to-transparent"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeInSection>
-            <div className="glass rounded-[2rem] overflow-hidden shadow-2xl border border-[var(--glass-border)]">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+                <p className="text-xs font-bold text-[#D4AF37] tracking-[0.25em] uppercase">
+                  Meet the Founder
+                </p>
+                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
+              </div>
+              <h2 className="font-[family-name:var(--font-serif)] text-4xl sm:text-5xl lg:text-[3.5rem] font-light text-[var(--foreground)] leading-tight tracking-tight">
+                The Mind Behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic pr-2">Wealth Acumen</span>
+              </h2>
+            </div>
+          </FadeInSection>
+ 
+          <FadeInSection delay={0.15}>
+            <div className="relative max-w-6xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                {/* Premium Image Presentation */}
+                <div className="w-full lg:w-5/12 relative flex justify-center lg:justify-end">
+                  {/* Decorative Elements */}
+                  <div className="absolute -inset-4 bg-gradient-to-tr from-[#D4AF37]/20 to-transparent rounded-[2rem] blur-xl opacity-50"></div>
+                  <div className="absolute top-10 -left-10 w-32 h-32 bg-[#D4AF37]/15 rounded-full blur-2xl"></div>
+                  <div className="absolute -bottom-10 right-0 w-40 h-40 bg-[#D4AF37]/15 rounded-full blur-2xl"></div>
+                  
+                  <div className="relative w-[300px] sm:w-[380px] lg:w-[420px] h-[380px] sm:h-[480px] lg:h-[540px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-[var(--glass-border)] group bg-gradient-to-b from-transparent to-[#D4AF37]/5">
+                    <Image 
+                      src="/assets/images/founder.png"
+                      alt="Atharva Wadekar"
+                      fill
+                      className="object-cover object-top sm:object-[center_10%] transition-transform duration-700 group-hover:scale-105"
+                    />
+                    {/* Subtle Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent opacity-30 pointer-events-none"></div>
+                  </div>
+                </div>
+
+                {/* Elegant Text Content */}
+                <div className="w-full lg:w-7/12 text-center lg:text-left flex flex-col items-center lg:items-start pt-4 lg:pt-0">
+                  <div className="inline-flex items-center gap-4 mb-6">
+                    <div className="hidden lg:block w-12 h-[1px] bg-[#D4AF37]"></div>
+                    <p className="text-sm font-semibold text-[#D4AF37] uppercase tracking-[0.3em] font-[family-name:var(--font-outfit)]">
+                      Visionary Leadership
+                    </p>
+                  </div>
+                  
+                  <h3 className="font-[family-name:var(--font-serif)] text-5xl sm:text-6xl lg:text-7xl font-light text-[var(--foreground)] mb-5 tracking-tight leading-none">
+                    Atharva <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#C59B27] italic pr-2">Wadekar</span>
+                  </h3>
+   
+                  <div className="mb-8">
+                    <p className="text-sm sm:text-base text-[var(--theme-text-muted)] font-semibold uppercase tracking-[0.2em]">
+                      Proprietor • {brand.name}
+                    </p>
+                  </div>
+   
+                  <div className="relative">
+                    <svg className="absolute -top-6 -left-10 w-20 h-20 text-[#D4AF37]/10 transform -scale-x-100 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                    <p className="text-[var(--theme-text-muted)] leading-relaxed text-lg sm:text-xl font-light max-w-2xl relative z-10">
+                      {proprietor.bio}
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* ═══ OUR MISSION ═══ */}
+      <section className="pt-20 pb-10 sm:pt-24 sm:pb-12 bg-[var(--background)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeInSection>
+            <div className="glass rounded-[2rem] overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.06)] dark:shadow-[0_15px_40px_rgba(0,0,0,0.4)] border border-[var(--glass-border)] bg-[var(--secondary-bg)]">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Left: Image Card */}
                 <div className="relative w-full h-[280px] sm:h-[360px] lg:h-auto min-h-[320px] overflow-hidden">
@@ -197,25 +354,24 @@ export default function AboutPage() {
                       src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
                       alt="Our Mission"
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
-                    <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--background)] to-transparent hidden lg:block opacity-70" />
+                    <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--secondary-bg)] to-transparent hidden lg:block opacity-70" />
                   </motion.div>
                 </div>
 
                 {/* Right: Heading + Text */}
                 <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-center gap-6">
                   <FadeInSection delay={0.15}>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
-                      <p className="text-xs font-bold text-[#D4AF37] tracking-[0.25em] uppercase">Our Purpose</p>
-                    </div>
-                    <h2 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl lg:text-5xl font-light text-[var(--foreground)] leading-tight tracking-tight mb-4">
-                      Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic font-medium pr-2 pb-1">Mission</span>
+                    <h2 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#4c5270] dark:text-[#a0a6cc] leading-tight tracking-tight mb-8">
+                      Our Mission
                     </h2>
-                    <div className="flex items-start gap-4">
-                      <p className="text-[var(--theme-text-muted)] leading-relaxed text-base sm:text-lg">
-                        {aboutContent.missionFull}
+                    <div className="flex flex-col gap-6">
+                      <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-base sm:text-[1.05rem]">
+                        Our mission is to guide clients toward purposeful wealth creation through personalized strategies, continuous support, and financial education. We strive to help every investor achieve their financial goals with clarity, confidence, and peace of mind.
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 leading-relaxed text-base sm:text-[1.05rem]">
+                        By promoting disciplined and goal-oriented investing, we also aim to maximize returns for our clients over the long term—ensuring that wealth creation is not just a possibility, but a reality.
                       </p>
                     </div>
                   </FadeInSection>
@@ -299,84 +455,10 @@ export default function AboutPage() {
         </div>
       </section>
  
-      {/* ═══ PROPRIETOR ═══ */}
-      <section
-        id="proprietor"
-        className="pt-10 pb-20 sm:pt-12 sm:pb-24 bg-gradient-to-b from-transparent via-cyan-500/[0.02] to-transparent"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeInSection>
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
-                <p className="text-xs font-bold text-[#D4AF37] tracking-[0.25em] uppercase">
-                  Meet the Founder
-                </p>
-                <div className="w-8 h-[2px] bg-[#D4AF37]"></div>
-              </div>
-              <h2 className="font-[family-name:var(--font-serif)] text-4xl sm:text-5xl lg:text-[3.5rem] font-light text-[var(--foreground)] leading-tight tracking-tight">
-                The Mind Behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] italic">Wealth Acumen</span>
-              </h2>
-            </div>
-          </FadeInSection>
- 
-          <FadeInSection delay={0.15}>
-            <div className="relative max-w-6xl mx-auto">
-              <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                {/* Premium Image Presentation */}
-                <div className="w-full lg:w-5/12 relative flex justify-center lg:justify-end">
-                  {/* Decorative Elements */}
-                  <div className="absolute -inset-4 bg-gradient-to-tr from-[#D4AF37]/20 to-transparent rounded-[2rem] blur-xl opacity-50"></div>
-                  <div className="absolute top-10 -left-10 w-32 h-32 bg-[#D4AF37]/15 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-10 right-0 w-40 h-40 bg-[#D4AF37]/15 rounded-full blur-2xl"></div>
-                  
-                  <div className="relative w-[300px] sm:w-[380px] lg:w-[420px] h-[380px] sm:h-[480px] lg:h-[540px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-[var(--glass-border)] group bg-gradient-to-b from-transparent to-[#D4AF37]/5">
-                    <Image 
-                      src="/assets/images/founder.png"
-                      alt="Atharva Wadekar"
-                      fill
-                      className="object-cover object-top sm:object-[center_10%] transition-transform duration-700 group-hover:scale-105"
-                    />
-                    {/* Subtle Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-transparent opacity-30 pointer-events-none"></div>
-                  </div>
-                </div>
+      {/* ═══ EMPANELED AMCs ═══ */}
+      <EmpaneledAMCCarousel />
 
-                {/* Elegant Text Content */}
-                <div className="w-full lg:w-7/12 text-center lg:text-left flex flex-col items-center lg:items-start pt-4 lg:pt-0">
-                  <div className="inline-flex items-center gap-4 mb-6">
-                    <div className="hidden lg:block w-12 h-[1px] bg-[#D4AF37]"></div>
-                    <p className="text-sm font-semibold text-[#D4AF37] uppercase tracking-[0.3em] font-[family-name:var(--font-outfit)]">
-                      Visionary Leadership
-                    </p>
-                  </div>
-                  
-                  <h3 className="font-[family-name:var(--font-serif)] text-5xl sm:text-6xl lg:text-7xl font-light text-[var(--foreground)] mb-5 tracking-tight leading-none">
-                    Atharva <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#C59B27] italic">Wadekar</span>
-                  </h3>
-   
-                  <div className="mb-8">
-                    <p className="text-sm sm:text-base text-[var(--theme-text-muted)] font-semibold uppercase tracking-[0.2em]">
-                      Proprietor • {brand.name}
-                    </p>
-                  </div>
-   
-                  <div className="relative">
-                    <svg className="absolute -top-6 -left-10 w-20 h-20 text-[#D4AF37]/10 transform -scale-x-100 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
-                    <p className="text-[var(--theme-text-muted)] leading-relaxed text-lg sm:text-xl font-light max-w-2xl relative z-10">
-                      {proprietor.bio}
-                    </p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
- 
+
 
     </div>
   );

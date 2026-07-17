@@ -48,7 +48,7 @@ export function InteractiveCompassHero() {
     if (!isSpinning) setActiveAngle(0);
   };
 
-  const titleLine1 = "Wealth Acumen".split(" ");
+  const titleLine1 = "Welcome To Wealth Acumen".split(" ");
   const titleLine2 = "Invest right. Prosper bright.".split(" ");
 
   const wordVariants = {
@@ -97,7 +97,7 @@ export function InteractiveCompassHero() {
       >
         
         {/* Left Text Content */}
-        <div className="flex-1 text-center lg:text-left xl:-ml-6 lg:-mt-12 xl:-mt-24 relative">
+        <div className="flex-1 text-center lg:text-left lg:ml-12 xl:ml-16 lg:-mt-12 xl:-mt-24 relative">
           
           {/* Layered Premium Hero Background Blob */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] max-w-[1200px] h-[700px] z-[-1] pointer-events-none overflow-hidden" style={{ maskImage: "radial-gradient(circle at center, black 40%, transparent 80%)", WebkitMaskImage: "radial-gradient(circle at center, black 40%, transparent 80%)" }}>
@@ -157,15 +157,10 @@ export function InteractiveCompassHero() {
                 ))}
               </span>
             </h1>
-            
-            <motion.p variants={wordVariants} className="text-lg text-[var(--theme-text-muted)] max-w-lg mx-auto lg:mx-0 leading-relaxed mb-10 font-medium transition-colors duration-500">
-              No matter where you are in life, our comprehensive approach acts as a compass—guiding you through every financial decision until you reach ultimate freedom.
-            </motion.p>
-            
             <motion.div variants={wordVariants} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-2">
-              <Link href={brand.whatsapp} target="_blank" className="group relative overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#8B6914] text-[#040F2D] font-light py-4 px-8 rounded-full shadow-[0_8px_20px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto min-w-[200px]">
+              <Link href="/about" className="group relative overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#8B6914] text-[#0B245B] font-light py-4 px-8 rounded-full shadow-[0_8px_20px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto min-w-[200px]">
                 <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                <span className="relative z-10">Start Your Journey</span>
+                <span className="relative z-10">Read more</span>
               </Link>
               <Link href="/services" className="group relative overflow-hidden bg-[var(--secondary-bg)] backdrop-blur-sm border border-[var(--secondary-border)] text-[var(--foreground)] font-light py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-[var(--secondary-hover-bg)] flex items-center justify-center w-full sm:w-auto min-w-[200px]">
                 <div className="absolute inset-0 w-full h-full bg-[var(--secondary-bg)] -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
@@ -217,8 +212,8 @@ export function InteractiveCompassHero() {
                       w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center group
                       backdrop-blur-md shadow-xl transition-colors duration-500
                       ${isHighlighted 
-                        ? 'bg-[#040F2D] border-2 border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)] z-20 scale-110' 
-                        : 'bg-[var(--background)] border border-[var(--glass-border)] z-10 hover:border-[#D4AF37] hover:bg-[#040F2D] cursor-pointer'}
+                        ? 'bg-[#0B245B] border-2 border-[#D4AF37] shadow-[0_0_30px_rgba(212,175,55,0.4)] z-20 scale-110' 
+                        : 'bg-[var(--background)] border border-[var(--glass-border)] z-10 hover:border-[#D4AF37] hover:bg-[#0B245B] cursor-pointer'}
                     `}
                   >
                     <node.Icon 
@@ -273,7 +268,7 @@ export function InteractiveCompassHero() {
           {/* Center Compass Pivot */}
           <motion.div 
             animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#040F2D] backdrop-blur-sm border-2 border-[#D4AF37] z-30 shadow-[0_0_30px_rgba(212,175,55,0.2)] flex items-center justify-center pointer-events-none p-4 lg:p-5 transition-colors duration-500"
+            className="absolute w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#0B245B] backdrop-blur-sm border-2 border-[#D4AF37] z-30 shadow-[0_0_30px_rgba(212,175,55,0.2)] flex items-center justify-center pointer-events-none p-4 lg:p-5 transition-colors duration-500"
           >
             <div className="relative w-full h-full flex items-center justify-center">
               <Image 

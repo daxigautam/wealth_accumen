@@ -85,7 +85,7 @@ export function LiveDashboard() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.15 + 0.6 }}
-                  className="flex items-center gap-4 bg-[#040F2D]/60 backdrop-blur-sm p-4 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-shadow"
+                  className="flex items-center gap-4 bg-[#0B245B]/60 backdrop-blur-sm p-4 rounded-2xl border border-white/40 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="w-8 h-8 rounded-full bg-emerald-100/80 flex items-center justify-center text-emerald-600 shrink-0">
                     <Check className="w-4 h-4" strokeWidth={3} />

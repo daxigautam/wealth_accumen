@@ -3,11 +3,11 @@ export const brand = {
   tagline: "Doing the right investment at the right time",
   description:
     "Choose Wealth Acumen for personalized strategies, trusted insights, ethical guidance, and steady, long-term wealth growth.",
-  phone: "+91 93252 27357",
+  phone: "9325227357",
   whatsapp: "https://wa.me/9325227357",
   email: "info@wealthacumen.in",
   instagram:
-    "https://www.instagram.com/wealthacumen31?igsh=MWIzcHpzbWt4ZDByMQ%3D%3D&utm_source=qr",
+    "https://www.instagram.com/wealth__acumen?igsh=YjcydGoweGt0ZGM5",
   whatsappChannel:
     "https://whatsapp.com/channel/0029VaaaGehLo4hjv6EYgm01",
   address:

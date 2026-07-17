@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { blogPosts } from "@/config/content";
-import { LightPremiumBlogHero } from "@/components/ui/LightPremiumBlogHero";
+
 
 /* ─── Animation Helper ─── */
 function FadeInSection({
@@ -35,11 +35,37 @@ function FadeInSection({
 export default function BlogPage() {
   return (
     <div className="bg-[var(--background)] text-[var(--foreground)] min-h-screen transition-colors duration-500">
-      <LightPremiumBlogHero />
+      {/* ═══ HERO BANNER ═══ */}
+      <section className="relative pt-44 pb-28 sm:pt-52 sm:pb-36 overflow-hidden flex items-center">
+        <Image
+          src="/assets/images/hero-banners/our-blogs-hero-banner.png"
+          alt="Our Blogs"
+          fill
+          className="object-cover object-[75%_center] md:object-[80%_center]"
+          priority
+        />
+        
+        {/* Text Overlay */}
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-12 text-left">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl ml-4 lg:ml-12 xl:ml-16"
+          >
+            <h1 className="font-[family-name:var(--font-outfit)] text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.1] font-light text-[#0B245B] mb-4 drop-shadow-md">
+              Our <span className="text-[#D4AF37]">Blogs</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-[#0B245B]/80 max-w-lg hidden sm:block leading-relaxed">
+              Insights, updates, and expert advice to guide your financial journey.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* ═══ BLOG POSTS GRID ═══ */}
-      <section className="section-padding pt-8">
-        <div className="max-w-6xl mx-auto">
+      <section className="pt-8 pb-24 px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div className="max-w-none mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
             {blogPosts.map((post, i) => (
               <FadeInSection key={post.slug} delay={i * 0.1}>
@@ -78,7 +104,7 @@ export default function BlogPage() {
                     <p className="text-sm text-[var(--theme-text-muted)] leading-relaxed line-clamp-3 mb-4">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center gap-1.5 text-sm font-medium text-[#040F2D] group-hover:text-[#D4AF37] transition-colors mt-auto pt-2">
+                    <div className="flex items-center gap-1.5 text-sm font-medium text-[#0B245B] group-hover:text-[#D4AF37] transition-colors mt-auto pt-2">
                       Read more
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

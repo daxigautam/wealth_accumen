@@ -123,7 +123,7 @@ export function WealthOrbitHero() {
               <Link 
                 href={brand.whatsapp}
                 target="_blank"
-                className="group relative overflow-hidden bg-[#D4AF37] text-[#040F2D] font-light py-4 px-8 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto min-w-[200px]"
+                className="group relative overflow-hidden bg-[#D4AF37] text-[#0B245B] font-light py-4 px-8 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto min-w-[200px]"
               >
                 <div className="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 <span className="relative z-10">Start Your Journey</span>
@@ -187,7 +187,7 @@ export function WealthOrbitHero() {
               <motion.div 
                 animate={{ scale: [1, 1.02, 1] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex items-center justify-center bg-[#040F2D] shadow-[inset_0_0_40px_rgba(255,255,255,0.15),_0_20px_50px_rgba(0,0,0,0.5),_0_0_60px_rgba(212,175,55,0.2)] backdrop-blur-2xl border border-[#D4AF37]"
+                className="relative w-36 h-36 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex items-center justify-center bg-[#0B245B] shadow-[inset_0_0_40px_rgba(255,255,255,0.15),_0_20px_50px_rgba(0,0,0,0.5),_0_0_60px_rgba(212,175,55,0.2)] backdrop-blur-2xl border border-[#D4AF37]"
               >
                 {/* 3D Sphere Inner Highlights */}
                 <div className="absolute top-[-10%] left-[-10%] w-[120%] h-[120%] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.2)_0%,transparent_50%)]" />

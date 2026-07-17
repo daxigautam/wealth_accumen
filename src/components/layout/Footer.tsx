@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { brand } from "@/config/brand";
-import { FooterThemeToggle } from "./FooterThemeToggle";
+
 
 export function Footer() {
   return (
-    <footer className="bg-[#040F2D] border-t border-[#D4AF37]/10 relative overflow-hidden text-[#F8FAFC]">
+    <footer className="bg-[#0B245B] border-t border-[#D4AF37]/10 relative overflow-hidden text-[#F8FAFC]">
       {/* Subtle background effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
       <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
@@ -57,8 +57,6 @@ export function Footer() {
               </a>
             </div>
             
-            {/* Theme Toggle */}
-            <FooterThemeToggle />
           </div>
 
           {/* Quick Links */}
@@ -70,10 +68,9 @@ export function Footer() {
               {[
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
-                { label: "Contact Us", href: "/contact" },
-                { label: "FAQs", href: "/faq" },
-                { label: "Blogs", href: "/blog" },
                 { label: "Downloads", href: "/downloads" },
+                { label: "FAQs", href: "/faq" },
+                { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -146,8 +143,10 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6 pt-4 border-t border-white/10 flex gap-4">
+            <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap gap-4">
               {[
+                { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms and Conditions", href: "/terms-and-conditions" },
                 { label: "Disclaimer", href: "/disclaimer" },
                 { label: "Disclosure", href: "/disclosure" },
               ].map((link) => (

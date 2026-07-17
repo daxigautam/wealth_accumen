@@ -1,7 +1,7 @@
 export const heroContent = {
-  tagline: "Doing the right investment at the right time",
+  tagline: "Welcome To Wealth Acumen",
   subtitle:
-    "Choose Wealth Acumen for personalized strategies, trusted insights, ethical guidance, and steady, long-term wealth growth.",
+    "At Wealth Acumen, we believe that smart investing begins with clarity and confidence. As a trusted provider of investment and financial solutions, we are committed to guiding individuals and families toward long-term wealth creation.",
   ctaText: "Start Your Journey",
   ctaSecondaryText: "Explore Services",
 };
@@ -10,7 +10,7 @@ export const missionVision = {
   mission:
     "Our mission is to empower clients with personalized strategies and education for disciplined, goal-driven investing that builds lasting wealth and financial confidence.",
   vision:
-    "To be a trusted partner in every investor's journey, enabling financial freedom through smart, sustainable, and informed wealth-building strategies.",
+    "By promoting disciplined and goal-oriented investing, we also aim to maximize returns for our clients over the long term—ensuring that wealth creation is not just a possibility, but a reality.",
 };
 
 export const whyChooseUs = [
@@ -27,18 +27,6 @@ export const whyChooseUs = [
       "We focus on long-term wealth creation through disciplined, systematic investment approaches designed to generate consistent returns.",
   },
   {
-    icon: "book-open",
-    title: "Education-First Approach",
-    description:
-      "We empower our clients with financial literacy, because an informed investor is a confident investor.",
-  },
-  {
-    icon: "shield",
-    title: "Ethical & Transparent Advisory",
-    description:
-      "Trust is the foundation of our relationship. No hidden charges, no misleading promises, just honest, transparent guidance.",
-  },
-  {
     icon: "headphones",
     title: "Continuous Support & Guidance",
     description:
@@ -50,124 +38,114 @@ export const services = [
   {
     slug: "equity",
     title: "Equity",
-    shortDescription:
-      "We assist you in your equity investment journey by helping you access tools, research insights, and educational content available through our partner Angel One.",
-    fullDescription:
-      "Equity investing offers a powerful way to build wealth by owning shares of publicly listed companies in India. We help you navigate the dynamic world of the Indian stock market with informed strategies, research-backed recommendations, and personalized guidance. Whether you're a first-time investor or looking to diversify your portfolio, our equity solutions are designed to match your financial goals and risk profile. With a focus on long-term value creation, we bring clarity and confidence to your equity investment journey.",
-    heroLine:
-      "Growth Potential with Equity Investing. Build Long-Term Wealth Through Ownership in India's Leading Companies",
+    shortDescription: "We assist you in your equity investment journey by helping you access tools, research insights, and educational content available through our partner Angel One.  we guide you in navigating the platform and understanding stock market fundamentals so you can make informed investment decisions confidently. Whether you are just starting out or already investing, we’re here to support your growth.",
+    fullDescription: "We assist you in your equity investment journey by helping you access tools, research insights, and educational content available through our partner Angel One.  we guide you in navigating the platform and understanding stock market fundamentals so you can make informed investment decisions confidently. Whether you are just starting out or already investing, we’re here to support your growth.\\n\\nEquity investing offers a powerful way to build wealth by owning shares of publicly listed companies in India. We help you navigate the dynamic world of the Indian stock market with informed strategies, research-backed recommendations, and personalized guidance. Whether you’re a first-time investor or looking to diversify your portfolio, our equity solutions are designed to match your financial goals and risk profile. With a focus on long-term value creation, we bring clarity and confidence to your equity investment journey.",
+    heroLine: "Growth Potential with Equity Investing. Build Long-Term Wealth Through Ownership in India's Leading Companies",
     features: [
       "High Growth Potential through capital appreciation",
       "Ownership in Companies listed on Indian stock exchanges",
-      "Liquidity, easy to buy and sell on markets",
+      "Liquidity – easy to buy and sell on markets",
       "Diversification across sectors and industries",
       "Dividend Income from profit-sharing by companies",
       "Regulated and Transparent under SEBI guidelines",
-      "Ideal for Long-Term Investors seeking wealth creation",
+      "Ideal for Long-Term Investors seeking wealth creation"
     ],
     icon: "bar-chart-2",
+    image: "/assets/images/services/equity.jpeg"
   },
   {
     slug: "mutual-funds",
     title: "Mutual Funds",
-    shortDescription:
-      "We offer end-to-end support for mutual fund investments, right from risk profiling to portfolio selection.",
-    fullDescription:
-      "Mutual funds are one of the most efficient and accessible ways to grow your wealth, offering diversified exposure to different asset classes with the convenience of professional fund management. We make mutual fund investing simple, transparent, and aligned with your personal financial goals. We offer end-to-end support throughout your investment journey, from understanding your risk appetite to selecting the right funds. Whether you're aiming for long-term capital growth, steady income, or tax-saving opportunities, we help you choose from a wide range of mutual funds, including equity, debt, hybrid, and ELSS. Our recommendations are backed by in-depth research and data-driven insights. With the option to invest through Systematic Investment Plans (SIPs) or lump sum amounts, we promote disciplined, goal-based investing that fits every stage of life. We also ensure continuous monitoring and regular portfolio reviews, so your investments stay on track and evolve with your needs. With Wealth Acumen, mutual fund investing becomes a seamless experience, transparent, guided, and focused on long-term wealth creation.",
-    heroLine:
-      "Invest Smartly with Mutual Funds. Tailored Solutions for Every Goal, Backed by Expert Guidance and Research",
+    shortDescription: "We offer end-to-end support for mutual fund investments—right from risk profiling to portfolio selection. Our curated recommendations include equity, debt, hybrid, and tax-saving mutual funds suited for every financial objective. We help you invest via SIPs or lump sum for disciplined and goal-based investing.",
+    fullDescription: "We offer end-to-end support for mutual fund investments—right from risk profiling to portfolio selection. Our curated recommendations include equity, debt, hybrid, and tax-saving mutual funds suited for every financial objective. We help you invest via SIPs or lump sum for disciplined and goal-based investing.\\n\\nMutual funds are one of the most efficient and accessible ways to grow your wealth, offering diversified exposure to different asset classes with the convenience of professional fund management. We make mutual fund investing simple, transparent, and aligned with your personal financial goals.\\n\\nWe offer end-to-end support throughout your investment journey—from understanding your risk appetite to selecting the right funds. Whether you’re aiming for long-term capital growth, steady income, or tax-saving opportunities, we help you choose from a wide range of mutual funds, including equity, debt, hybrid, and ELSS.\\n\\nOur recommendations are backed by in-depth research and data-driven insights. With the option to invest through Systematic Investment Plans (SIPs) or lump sum amounts, we promote disciplined, goal-based investing that fits every stage of life.\\n\\nWe also ensure continuous monitoring and regular portfolio reviews, so your investments stay on track and evolve with your needs. With Wealth Acumen, mutual fund investing becomes a seamless experience—transparent, guided, and focused on long-term wealth creation.",
+    heroLine: "Invest Smartly with Mutual Funds. Tailored Solutions for Every Goal, Backed by Expert Guidance and Research",
     features: [
       "Personalized Portfolio Planning based on your goals and risk tolerance",
-      "Wide Fund Variety, equity, debt, hybrid, and ELSS options",
-      "Flexible Investment Modes, SIP or lump sum",
+      "Wide Fund Variety – equity, debt, hybrid, and ELSS options",
+      "Flexible Investment Modes – SIP or lump sum",
       "Professional Fund Management by trusted AMCs",
       "Tax-Efficient Options under Section 80C (ELSS)",
       "Transparency & Regulation under SEBI guidelines",
-      "Ideal for Long-Term Wealth Creation",
+      "Ideal for Long-Term Wealth Creation"
     ],
     icon: "pie-chart",
+    image: "/assets/images/services/mutual-funds.jpeg"
   },
   {
     slug: "insurance",
     title: "Insurance",
-    shortDescription:
-      "Protecting your wealth is as important as growing it. We assist you in choosing the right insurance products.",
-    fullDescription:
-      "Insurance is a critical pillar of financial planning, offering security and stability in life's unpredictable moments. We believe that protecting your wealth is just as important as growing it. That's why we guide you in selecting the right insurance solutions that align with your life stage, responsibilities, and financial goals. We offer expert support in choosing essential coverage options like term life insurance for income protection and health insurance for managing medical expenses. Our approach is personalized, we assess your specific needs and recommend plans that offer maximum coverage at the most competitive premiums. With access to top insurers and a clear understanding of policy terms, we help you make informed decisions with confidence. Our goal is to ensure that you and your family are financially protected, no matter what life brings. From plan comparison to paperwork, we simplify the entire process, so you can focus on what truly matters, your future.",
-    heroLine:
-      "Secure Your Future. The Right Insurance Today Protects Your Wealth and Peace of Mind Tomorrow.",
+    shortDescription: "Protecting your wealth is as important as growing it. We assist you in choosing the right insurance products, including term life insurance and health insurance, based on your needs. Our guidance ensures you get adequate coverage at competitive premiums from trusted providers.",
+    fullDescription: "Protecting your wealth is as important as growing it. We assist you in choosing the right insurance products, including term life insurance and health insurance, based on your needs. Our guidance ensures you get adequate coverage at competitive premiums from trusted providers.\\n\\nInsurance is a critical pillar of financial planning—offering security and stability in life’s unpredictable moments. We believe that protecting your wealth is just as important as growing it. That’s why we guide you in selecting the right insurance solutions that align with your life stage, responsibilities, and financial goals.\\n\\nWe offer expert support in choosing essential coverage options like term life insurance for income protection and health insurance for managing medical expenses. Our approach is personalized—we assess your specific needs and recommend plans that offer maximum coverage at the most competitive premiums.\\n\\nWith access to top insurers and a clear understanding of policy terms, we help you make informed decisions with confidence. Our goal is to ensure that you and your family are financially protected, no matter what life brings.\\n\\nFrom plan comparison to paperwork, We simplifies the entire process, so you can focus on what truly matters-your future.",
+    heroLine: "Secure Your Future. The Right Insurance Today Protects Your Wealth and Peace of Mind Tomorrow.",
     features: [
       "Personalized Insurance Planning based on your life stage and financial goals",
-      "Comprehensive Coverage, Term Life and Health Insurance options",
+      "Comprehensive Coverage – Term Life and Health Insurance options",
       "Trusted Providers offering reliable and well-rated insurance products",
       "Competitive Premiums with maximum value",
       "Easy Comparison & Selection of policies",
       "Claim Support & Assistance whenever needed",
-      "Protection for Family & Wealth in the face of uncertainties",
+      "Protection for Family & Wealth in the face of uncertainties"
     ],
     icon: "shield-check",
+    image: "/assets/images/services/insurance-new.png"
   },
   {
     slug: "etfs",
     title: "ETFs (Exchange Traded Funds)",
-    shortDescription:
-      "Looking for low-cost, diversified investment options? We guide you in selecting the right ETFs.",
-    fullDescription:
-      "Exchange Traded Funds (ETFs) are a smart choice for investors seeking low-cost, diversified exposure to a wide range of assets. We help you select the right ETFs that align with your investment goals, whether you're looking for growth, stability, or inflation protection. ETFs combine the best features of mutual funds and stocks, offering diversification across sectors or indices, while being traded on the stock exchange in real time. From equity-based ETFs that mirror indices like Nifty or Sensex, to debt ETFs, gold ETFs, and Bharat Bond ETFs, we guide you in building a portfolio that's transparent, cost-effective, and easy to manage. Perfect for passive investors, ETFs are ideal for those who want long-term exposure with minimal involvement. With our expert insights and personalized advice, investing in ETFs becomes simple, strategic, and rewarding.",
-    heroLine:
-      "Effortless Investing with ETFs. Diversify Smartly, Invest Efficiently, Stay in Control",
+    shortDescription: "Looking for low-cost, diversified investment options? We guide you in selecting the right ETFs—whether equity-based, debt-oriented, gold ETFs, or Bharat Bond ETFs. Ideal for passive investors, ETFs offer transparency, liquidity, and cost-efficiency.",
+    fullDescription: "Looking for low-cost, diversified investment options? We guide you in selecting the right ETFs—whether equity-based, debt-oriented, gold ETFs, or Bharat Bond ETFs. Ideal for passive investors, ETFs offer transparency, liquidity, and cost-efficiency.\\n\\nExchange Traded Funds (ETFs) are a smart choice for investors seeking low-cost, diversified exposure to a wide range of assets. We help you select the right ETFs that align with your investment goals—whether you’re looking for growth, stability, or inflation protection.\\n\\nETFs combine the best features of mutual funds and stocks, offering diversification across sectors or indices, while being traded on the stock exchange in real time. From equity-based ETFs that mirror indices like Nifty or Sensex, to debt ETFs, gold ETFs, and Bharat Bond ETFs, we guide you in building a portfolio that’s transparent, cost-effective, and easy to manage.\\n\\nPerfect for passive investors, ETFs are ideal for those who want long-term exposure with minimal involvement. With our expert insights and personalized advice, investing in ETFs becomes simple, strategic, and rewarding.",
+    heroLine: "Effortless Investing with ETFs. Diversify Smartly, Invest Efficiently, Stay in Control",
     features: [
       "Low-Cost Investing with minimal expense ratios",
       "Diversification across asset classes, sectors, or indices",
       "Real-Time Trading like stocks on major exchanges",
       "High Liquidity for easy entry and exit",
       "Transparency in holdings and performance tracking",
-      "Variety of Options, Equity, Debt, Gold, and Bharat Bond ETFs",
-      "Ideal for Passive Investors focused on long-term goals",
+      "Variety of Options – Equity, Debt, Gold, and Bharat Bond ETFs",
+      "Ideal for Passive Investors focused on long-term goals"
     ],
     icon: "layers",
+    image: "/assets/images/services/etf.jpeg"
   },
   {
     slug: "bonds",
     title: "Bonds",
-    shortDescription:
-      "For conservative investors, we offer guidance on investing in fixed-income securities.",
-    fullDescription:
-      "Bonds are a reliable choice for conservative investors seeking steady returns with lower risk. At Wealth Acumen, we guide you in building a fixed-income portfolio through carefully selected government bonds, corporate bonds, and Bharat Bonds that align with your financial goals. Whether your objective is regular interest income, capital preservation, or diversifying beyond equities, our bond advisory services are tailored to provide stability and security. We help you understand the credit ratings, maturity periods, and tax implications, ensuring you make well-informed decisions. Our approach balances risk and return by selecting bonds that match your investment horizon and liquidity needs, making them a solid addition to a well-rounded portfolio.",
-    heroLine:
-      "Stable Returns, Lower Risk. Build a Secure Financial Base with Smart Bond Investments",
+    shortDescription: "For conservative investors, we offer guidance on investing in fixed-income securities such as government bonds, corporate bonds, and Bharat Bonds. Whether you’re seeking regular income or capital preservation, our bond advisory ensures a balanced risk-return profile.",
+    fullDescription: "For conservative investors, we offer guidance on investing in fixed-income securities such as government bonds, corporate bonds, and Bharat Bonds. Whether you’re seeking regular income or capital preservation, our bond advisory ensures a balanced risk-return profile.\\n\\nBonds are a reliable choice for conservative investors seeking steady returns with lower risk. At Wealth Acumen, we guide you in building a fixed-income portfolio through carefully selected government bonds, corporate bonds, and Bharat Bonds that align with your financial goals.\\n\\nWhether your objective is regular interest income, capital preservation, or diversifying beyond equities, our bond advisory services are tailored to provide stability and security. We help you understand the credit ratings, maturity periods, and tax implications—ensuring you make well-informed decisions.\\n\\nOur approach balances risk and return by selecting bonds that match your investment horizon and liquidity needs, making them a solid addition to a well-rounded portfolio.",
+    heroLine: "Stable Returns, Lower Risk. Build a Secure Financial Base with Smart Bond Investments",
     features: [
       "Low-Risk Investment Option ideal for conservative investors",
       "Regular Interest Income for predictable cash flow",
       "Capital Preservation with reduced market volatility",
-      "Diverse Bond Options, Government, Corporate, and Bharat Bonds",
+      "Diverse Bond Options – Government, Corporate, and Bharat Bonds",
       "Credit-Rating Based Selection for safety and performance",
       "Tax-Efficient Choices with select government-backed bonds",
+      "Tax-Efficient Choices with select government-backed bonds"
     ],
     icon: "lock",
+    image: "/assets/images/services/bonds.png"
   },
   {
     slug: "fixed-deposit",
     title: "Fixed Deposit",
-    shortDescription:
-      "Fixed Deposits (FDs) are your go-to investment option for peace of mind and steady growth.",
-    fullDescription:
-      "A Fixed Deposit (FD) is a secure investment option where you deposit a lump sum of money with a bank or financial institution for a fixed period at a pre-agreed interest rate. It offers guaranteed returns, making it ideal for risk-averse investors looking for stable income and capital protection. FDs are popular for their simplicity, flexibility in tenure, and the ability to grow your money without worrying about market ups and downs. Whether you're planning short-term savings or long-term goals, an FD gives you the financial confidence to move forward.",
-    heroLine:
-      "Secure Your Financial Future with Fixed Deposits. Earn Guaranteed Returns with Low Risk and Peace of Mind",
+    shortDescription: "Fixed Deposits (FDs) are your go-to investment option for peace of mind and steady growth.",
+    fullDescription: "Fixed Deposits (FDs) are your go-to investment option for peace of mind and steady growth.\\n\\nWith a Fixed Deposit, your money stays safe and earns interest at a pre-determined rate over a fixed tenure. It’s perfect for investors who prefer capital protection, predictable returns, and financial discipline.\\n\\nA Fixed Deposit (FD) is a secure investment option where you deposit a lump sum of money with a bank or financial institution for a fixed period at a pre-agreed interest rate. It offers guaranteed returns, making it ideal for risk-averse investors looking for stable income and capital protection.\\n\\nFDs are popular for their simplicity, flexibility in tenure, and the ability to grow your money without worrying about market ups and downs. Whether you’re planning short-term savings or long-term goals, an FD gives you the financial confidence to move forward.",
+    heroLine: "Secure Your Financial Future with Fixed Deposits. Earn Guaranteed Returns with Low Risk and Peace of Mind",
     features: [
       "Earn a fixed rate of interest throughout the tenure, unaffected by market fluctuations.",
       "Your principal amount is completely safe, making it a low-risk investment option.",
-      "Choose a duration that suits your financial goals, from 7 days to 10 years.",
-      "Generally offers higher interest than savings accounts.",
+      "Choose a duration that suits your financial goals — from 7 days to 10 years.",
+      "Generally offers higher interest than savings accounts. Some banks offer special rates for specific tenures.",
       "Individuals above 60 years enjoy higher interest rates, typically 0.25% to 0.75% extra.",
       "Need funds urgently? Avail up to 90% of your FD amount as a loan without breaking the deposit.",
+      "Interest earned is taxable under \"Income from Other Sources\". TDS is applicable if interest exceeds ₹40,000 (₹50,000 for senior citizens) annually.",
       "You can close your FD before maturity if needed (with minor penalty on interest in most cases).",
       "You can assign a nominee to receive the amount in case of any unforeseen event.",
-      "Set your FD to renew automatically on maturity to continue earning uninterrupted returns.",
+      "Set your FD to renew automatically on maturity to continue earning uninterrupted returns."
     ],
     icon: "landmark",
-  },
+    image: "/assets/images/services/service_fixed_income_premium.png"
+  }
 ];
 
 export const testimonials = [
@@ -207,7 +185,7 @@ export const aboutContent = {
   intro:
     "We believe that smart investing begins with clarity and confidence. As a trusted provider of investment and financial solutions, we are committed to guiding individuals and families toward long-term wealth creation.",
   missionFull:
-    "Our mission is to guide clients toward purposeful wealth creation through personalized strategies, continuous support, and financial education. We strive to help every investor achieve their financial goals with clarity, confidence, and peace of mind. By promoting disciplined and goal-oriented investing, we also aim to maximize returns for our clients over the long term, ensuring that wealth creation is not just a possibility, but a reality.",
+    "Our mission is to empower clients with personalized strategies and education for disciplined, goal-driven investing that builds lasting wealth and financial confidence.",
   angelOnePartnership:
     "As a proud Channel Partner of Angel One, one of India's leading financial services companies, I am committed to helping individuals and businesses navigate their investment journeys with confidence and ease. Through this partnership, I offer seamless access to Angel One's robust trading platforms, expert research, and a wide range of financial products including stocks, mutual funds, IPOs, ETFs, and more.",
   angelOneBenefits: [
@@ -274,56 +252,47 @@ export const faqs = [
 
 export const blogPosts = [
   {
-    slug: "mutual-fund-trends-2025",
-    title:
-      "Mutual Fund Trends in 2025: Embracing Passive Investing and Sectoral Shifts",
-    date: "July 5, 2025",
-    author: "Wealth Acumen",
-    image: "/assets/images/blog-mutual-fund-trends.webp",
-    excerpt:
-      "The Indian mutual fund industry has witnessed significant growth, with assets under management increasing from \u20B957.01 trillion in April 2024 to \u20B969.50 trillion in April 2025.",
-    content:
-      "The Indian mutual fund industry has witnessed significant growth, with assets under management increasing from \u20B957.01 trillion in April 2024 to \u20B969.50 trillion in April 2025. This blog will explore the rising popularity of passive funds, the shift towards beaten-down sectors, and the increasing adoption of systematic investment plans (SIPs).",
-    keyPoints: [
-      "How mutual fund managers are capitalizing on undervalued sectors amid market volatility.",
-      "The role of passive funds and multi-asset investing in portfolio diversification.",
-      "The growing trend of SIPs and their contribution to long-term wealth creation.",
-    ],
-  },
-  {
-    slug: "whats-driving-investor-sentiment",
-    title:
-      "What's Driving Investor Sentiment in the Indian Stock Market.",
-    date: "July 5, 2025",
+    slug: "ahead-of-market-ten-things",
+    title: "Ahead of Market: 10 Key Things Deciding Indian Stock Market Action",
+    date: "July 16, 2026",
     author: "Wealth Acumen",
     image: "/assets/images/blog-whats-driving-sentiment.jpg",
-    excerpt:
-      "As we enter the second half of 2025, the Indian equity markets are showing resilience despite global uncertainties and domestic regulatory actions.",
-    content:
-      "As we enter the second half of 2025, the Indian equity markets are showing resilience despite global uncertainties and domestic regulatory actions. From fresh all-time highs to intensified regulatory scrutiny, multiple factors are influencing investor behavior this month.",
+    excerpt: "Indian equities ended subdued as geopolitical tensions capped gains despite optimism around Q1 earnings. Here are the top factors that will drive market sentiment.",
+    content: "Indian equities ended subdued as geopolitical tensions capped gains despite optimism around Q1 earnings. Analysts expect stock-specific action, with financials, autos and digital firms in focus, while Nifty remains range-bound between key support and resistance amid cautious investor sentiment.",
     keyPoints: [
-      "SEBI Cracks Down on Jane Street: A Major Regulatory Shake-Up.",
-      "Sensex & Nifty on an Upward Trajectory.",
-      "Upcoming Catalysts to Watch: India-U.S. Trade Deal and Q1 FY26 Earnings Season.",
-    ],
+      "Impact of geopolitical tensions on Nifty levels.",
+      "Financials, auto, and digital stocks to lead momentum.",
+      "Earnings season catalysts for Q1 updates."
+    ]
   },
   {
-    slug: "navigating-indias-bullish-market-2025",
-    title:
-      "Navigating India's Bullish Market: Key Investment Strategies for 2025",
-    date: "June 25, 2025",
+    slug: "market-trading-guide-breakouts",
+    title: "Market Trading Guide: Technical Breakouts in Chennai Petroleum and ABB India",
+    date: "July 16, 2026",
     author: "Wealth Acumen",
     image: "/assets/images/blog-navigating-market.jpg",
-    excerpt:
-      "As India's stock market shows signs of continued growth, with the Nifty projected to reach between 25,200 and 25,800, investors are seeking strategies to capitalize on this momentum.",
-    content:
-      "As India's stock market shows signs of continued growth, with the Nifty projected to reach between 25,200 and 25,800, investors are seeking strategies to capitalize on this momentum. This blog will delve into the factors driving this bullish trend, including eased geopolitical tensions and robust foreign institutional investor (FII) inflows.",
+    excerpt: "Despite geopolitical concerns and volatile crude prices, multiple stocks have broken out technically, showing strong volume-backed price trends.",
+    content: "Indian equities ended subdued amid geopolitical concerns, volatile crude prices and weak Asian cues. Analysts recommend Chennai Petroleum and ABB India after strong technical breakouts, supported by rising volumes, bullish price structures and trading above key moving averages, indicating sustained upside potential.",
     keyPoints: [
-      "Analysis of sectors benefiting from capital expenditure and infrastructure development.",
-      "The impact of global factors, such as the U.S. credit rating downgrade, on Indian equities.",
-      "Strategies for investors to navigate potential market volatility and identify buying opportunities.",
-    ],
+      "Bullish breakouts in midcap industrials and energy.",
+      "Volume-backed confirmation above moving averages.",
+      "Strategies to set stops and targets for technical entries."
+    ]
   },
+  {
+    slug: "jio-financial-q1-results-profit-skyrockets",
+    title: "Jio Financial Q1 Results: Consolidated Profit Skyrockets 155% YoY",
+    date: "July 16, 2026",
+    author: "Wealth Acumen",
+    image: "/assets/images/blog-mutual-fund-trends.webp",
+    excerpt: "Jio Financial Services reported a massive 155% year-on-year growth in its consolidated net profit, reaching Rs 830 crore in the first quarter of the fiscal year.",
+    content: "Jio Financial on Thursday reported 155% year-on-year (YoY) growth in its consolidated net profit at Rs 830 crore in the first quarter. The same stood at Rs 325 crore in the same quarter last year. The massive surge highlights the firm's accelerating digital credit penetration and asset expansion.",
+    keyPoints: [
+      "A massive surge from Rs 325 crore to Rs 830 crore.",
+      "Expanding market footprints of Jio Financial Services.",
+      "Analyst projections for the company's retail lending growth."
+    ]
+  }
 ];
 
 export const diyContent = {

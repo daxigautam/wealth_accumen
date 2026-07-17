@@ -101,7 +101,7 @@ export function CompoundingCalculator() {
               step={500}
               value={monthlyInvestment}
               onChange={(e) => setMonthlyInvestment(Number(e.target.value))}
-              className="w-full accent-[#040F2D] transition-colors duration-500"
+              className="w-full accent-[#0B245B] transition-colors duration-500"
             />
             <div className="flex justify-between text-xs text-slate-500 mt-1">
               <span>&#8377;500</span>
@@ -126,7 +126,7 @@ export function CompoundingCalculator() {
               step={0.5}
               value={annualRate}
               onChange={(e) => setAnnualRate(Number(e.target.value))}
-              className="w-full accent-[#040F2D] transition-colors duration-500"
+              className="w-full accent-[#0B245B] transition-colors duration-500"
             />
             <div className="flex justify-between text-xs text-slate-500 mt-1">
               <span>1%</span>
@@ -151,7 +151,7 @@ export function CompoundingCalculator() {
               step={1}
               value={years}
               onChange={(e) => setYears(Number(e.target.value))}
-              className="w-full accent-[#040F2D] transition-colors duration-500"
+              className="w-full accent-[#0B245B] transition-colors duration-500"
             />
             <div className="flex justify-between text-xs text-slate-500 mt-1">
               <span>1 Year</span>
@@ -279,7 +279,7 @@ export function CompoundingCalculator() {
             </div>
 
             {/* Catch-Up Penalty Card */}
-            <div className="rounded-2xl border border-[#D4AF37]/30 bg-[#040F2D] p-6 flex flex-col justify-between relative overflow-hidden group">
+            <div className="rounded-2xl border border-[#D4AF37]/30 bg-[#0B245B] p-6 flex flex-col justify-between relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#D4AF37]/10 rounded-full blur-xl pointer-events-none" />
               <div>
                 <span className="inline-flex items-center gap-1.5 text-xs font-light text-[#D4AF37] bg-[#D4AF37]/10 border border-[#D4AF37]/20 px-2.5 py-1 rounded-full mb-4">

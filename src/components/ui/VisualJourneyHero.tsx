@@ -146,7 +146,7 @@ export function VisualJourneyHero() {
                   <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border border-[#D4AF37]/30 flex items-center justify-center bg-[#D4AF37]/5 shrink-0">
                     <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" strokeWidth={1.5} />
                   </div>
-                  <span className="text-[10px] sm:text-xs font-light text-[#040F2D] whitespace-nowrap">{milestone.title}</span>
+                  <span className="text-[10px] sm:text-xs font-light text-[#0B245B] whitespace-nowrap">{milestone.title}</span>
                 </motion.div>
               );
             })}
@@ -160,7 +160,7 @@ export function VisualJourneyHero() {
             className="flex flex-col sm:flex-row items-center gap-3 mt-10 w-full sm:w-auto"
           >
             <a
-              href="https://wa.me/something"
+              href={brand.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto bg-[#D4AF37] hover:bg-[#C9670A] text-white font-light text-sm sm:text-base py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#D9791A]/20"

@@ -40,7 +40,7 @@ export function LuxuryBentoHero() {
               <Link 
                 href={brand.whatsapp}
                 target="_blank"
-                className="bg-[#D4AF37] hover:bg-[#C59B27] text-[#040F2D] font-light py-4 px-8 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                className="bg-[#D4AF37] hover:bg-[#C59B27] text-[#0B245B] font-light py-4 px-8 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Start Your Journey <ArrowRight className="w-5 h-5" />
               </Link>

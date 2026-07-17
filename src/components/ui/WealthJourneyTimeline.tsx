@@ -142,7 +142,7 @@ export function WealthJourneyTimeline() {
 
           {/* Right Side: Matched Image */}
           <div className="lg:col-span-4 h-full hidden lg:block">
-            <div className="w-full h-full min-h-[300px] rounded-2xl overflow-hidden relative border border-[#040F2D]/10 shadow-2xl">
+            <div className="w-full h-full min-h-[300px] rounded-2xl overflow-hidden relative border border-[#0B245B]/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
               <img 
                 src="/assets/images/deal_handshake.png" 
